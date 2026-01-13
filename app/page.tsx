@@ -1,6 +1,27 @@
 import Link from "next/link";
 import Image from "next/image";
-import TestimonialCard from "@/components/TestimonialCard";
+import TestimonialSlider from "@/components/TestimonialSlider";
+
+const testimonials = [
+  {
+    quote: "LedgerLine took our messy spreadsheet process and turned it into a rock-solid operations tool. We haven't missed a handoff since.",
+    attribution: "Sarah M.",
+    role: "Operations Director",
+    industry: "Manufacturing"
+  },
+  {
+    quote: "The quoting system they built has completely removed the bottleneck in our sales cycle. It's fast, accurate, and reliable.",
+    attribution: "James K.",
+    role: "Head of Sales",
+    industry: "Logistics"
+  },
+  {
+    quote: "They understood our compliance requirements better than we did. The audit trail they built saved us during our last review.",
+    attribution: "Maria L.",
+    role: "Compliance Manager",
+    industry: "Healthcare Operations"
+  }
+];
 
 export default function Home() {
   return (
@@ -123,22 +144,9 @@ export default function Home() {
 
       {/* Testimonials Section */}
       <section className="py-20 px-6 bg-slate-900">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-semibold text-white mb-16 text-center">What clients say</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <TestimonialCard
-              quote="LedgerLine took our messy spreadsheet process and turned it into a rock-solid operations tool. We haven't missed a handoff since."
-              attribution="Sarah M."
-              role="Operations Director"
-              industry="Manufacturing"
-            />
-            <TestimonialCard
-              quote="The quoting system they built has completely removed the bottleneck in our sales cycle. It's fast, accurate, and reliable."
-              attribution="James K."
-              role="Head of Sales"
-              industry="Logistics"
-            />
-          </div>
+          <TestimonialSlider items={testimonials} />
         </div>
       </section>
 

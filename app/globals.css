@@ -32,4 +32,14 @@
   .link-underline:hover::after {
     @apply w-full;
   }
+
+  /* Hide scrollbar for testimonial slider */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
 }
