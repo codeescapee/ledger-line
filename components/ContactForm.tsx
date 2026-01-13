@@ -6,11 +6,18 @@ export default function ContactForm() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    work_type: "",
+    success: "",
     company: "",
-    replacing: "",
-    workflow: "",
+    website: "",
+    how_found: "",
+    funding: "",
+    phone: "",
     timeline: "",
     budget: "",
+    replacing: "",
+    notes: "",
+    page: "contact",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
@@ -41,11 +48,18 @@ export default function ContactForm() {
         setFormData({
           name: "",
           email: "",
+          work_type: "",
+          success: "",
           company: "",
-          replacing: "",
-          workflow: "",
+          website: "",
+          how_found: "",
+          funding: "",
+          phone: "",
           timeline: "",
           budget: "",
+          replacing: "",
+          notes: "",
+          page: "contact",
         });
       } else {
         setSubmitStatus("error");
@@ -59,6 +73,7 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
+      {/* Required fields */}
       <div>
         <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
           Name *
@@ -90,6 +105,42 @@ export default function ContactForm() {
       </div>
 
       <div>
+        <label htmlFor="work_type" className="block text-sm font-medium text-foreground mb-2">
+          What kind of work is this? *
+        </label>
+        <select
+          id="work_type"
+          name="work_type"
+          required
+          value={formData.work_type}
+          onChange={handleChange}
+          className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-accent-primary"
+        >
+          <option value="">Select type</option>
+          <option value="New app">New app</option>
+          <option value="Existing system">Existing system</option>
+          <option value="Audit or rescue">Audit or rescue</option>
+        </select>
+      </div>
+
+      <div>
+        <label htmlFor="success" className="block text-sm font-medium text-foreground mb-2">
+          What does success look like for you? *
+        </label>
+        <textarea
+          id="success"
+          name="success"
+          required
+          rows={4}
+          placeholder="Describe what outcome would make this project successful"
+          value={formData.success}
+          onChange={handleChange}
+          className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-accent-primary"
+        />
+      </div>
+
+      {/* Optional fields */}
+      <div>
         <label htmlFor="company" className="block text-sm font-medium text-foreground mb-2">
           Company <span className="text-accent-muted">(optional)</span>
         </label>
@@ -104,15 +155,28 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="replacing" className="block text-sm font-medium text-foreground mb-2">
-          What are you replacing? *
+        <label htmlFor="website" className="block text-sm font-medium text-foreground mb-2">
+          Website <span className="text-accent-muted">(optional)</span>
         </label>
-        <textarea
+        <input
+          type="url"
+          id="website"
+          name="website"
+          value={formData.website}
+          onChange={handleChange}
+          className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-accent-primary"
+        />
+      </div>
+
+      <div>
+        <label htmlFor="replacing" className="block text-sm font-medium text-foreground mb-2">
+          What are you replacing? <span className="text-accent-muted">(optional)</span>
+        </label>
+        <input
+          type="text"
           id="replacing"
           name="replacing"
-          required
-          rows={3}
-          placeholder="e.g., specific spreadsheets, a legacy tool, manual emails"
+          placeholder="Spreadsheets, Airtable, a legacy internal tool…"
           value={formData.replacing}
           onChange={handleChange}
           className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-accent-primary"
@@ -120,16 +184,55 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="workflow" className="block text-sm font-medium text-foreground mb-2">
-          What's the workflow? *
+        <label htmlFor="how_found" className="block text-sm font-medium text-foreground mb-2">
+          How did you find us? <span className="text-accent-muted">(optional)</span>
         </label>
-        <textarea
-          id="workflow"
-          name="workflow"
-          required
-          rows={4}
-          placeholder="Briefly describe the core steps the system needs to manage"
-          value={formData.workflow}
+        <select
+          id="how_found"
+          name="how_found"
+          value={formData.how_found}
+          onChange={handleChange}
+          className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-accent-primary"
+        >
+          <option value="">Select one</option>
+          <option value="Bubble">Bubble</option>
+          <option value="Referral">Referral</option>
+          <option value="Forum">Forum</option>
+          <option value="Search">Search</option>
+          <option value="Social">Social</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <div>
+        <label htmlFor="funding" className="block text-sm font-medium text-foreground mb-2">
+          Funding status <span className="text-accent-muted">(optional)</span>
+        </label>
+        <select
+          id="funding"
+          name="funding"
+          value={formData.funding}
+          onChange={handleChange}
+          className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-accent-primary"
+        >
+          <option value="">Select status</option>
+          <option value="Company budget approved">Company budget approved</option>
+          <option value="Self-funded">Self-funded</option>
+          <option value="Funding secured">Funding secured</option>
+          <option value="Funding in progress">Funding in progress</option>
+          <option value="Not sure yet">Not sure yet</option>
+        </select>
+      </div>
+
+      <div>
+        <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
+          Phone <span className="text-accent-muted">(optional)</span>
+        </label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          value={formData.phone}
           onChange={handleChange}
           className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-accent-primary"
         />
@@ -137,12 +240,11 @@ export default function ContactForm() {
 
       <div>
         <label htmlFor="timeline" className="block text-sm font-medium text-foreground mb-2">
-          Timeline *
+          Timeline <span className="text-accent-muted">(optional)</span>
         </label>
         <select
           id="timeline"
           name="timeline"
-          required
           value={formData.timeline}
           onChange={handleChange}
           className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-accent-primary"
@@ -156,12 +258,11 @@ export default function ContactForm() {
 
       <div>
         <label htmlFor="budget" className="block text-sm font-medium text-foreground mb-2">
-          Budget range *
+          Budget range <span className="text-accent-muted">(optional)</span>
         </label>
         <select
           id="budget"
           name="budget"
-          required
           value={formData.budget}
           onChange={handleChange}
           className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-accent-primary"
@@ -173,6 +274,20 @@ export default function ContactForm() {
           <option value="$35k–$75k">$35k–$75k</option>
           <option value="$75k+">$75k+</option>
         </select>
+      </div>
+
+      <div>
+        <label htmlFor="notes" className="block text-sm font-medium text-foreground mb-2">
+          Anything else we should know? <span className="text-accent-muted">(optional)</span>
+        </label>
+        <textarea
+          id="notes"
+          name="notes"
+          rows={3}
+          value={formData.notes}
+          onChange={handleChange}
+          className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-accent-primary"
+        />
       </div>
 
       {submitStatus === "success" && (
