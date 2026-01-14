@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 // Centralized logo source for easy future updates
-const LOGO_SRC = "/brand/ledgerline-logo-horizontal-bg.png";
+const LOGO_SRC = "/brand/docksmith-logo-square.png";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -26,10 +26,10 @@ export default function Header() {
         <Link href="/" className="flex items-center">
           <Image
             src={LOGO_SRC}
-            alt="LedgerLine"
-            width={240}
-            height={60}
-            className="h-10 w-auto lg:h-12"
+            alt="Docksmith"
+            width={48}
+            height={48}
+            className="h-10 w-10 lg:h-12 lg:w-12"
             priority
           />
         </Link>
@@ -49,7 +49,7 @@ export default function Header() {
           </Link>
           <Link
             href="/contact"
-            className="bg-accent-primary text-white px-6 py-2 rounded-md hover:bg-opacity-90 transition-all"
+            className="bg-accent-primary text-foreground px-6 py-2 rounded-md hover:brightness-90 transition-all"
           >
             Talk to us
           </Link>

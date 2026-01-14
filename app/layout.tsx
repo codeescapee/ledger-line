@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-jetbrains-mono" });
 
 export const metadata: Metadata = {
-  title: "LedgerLine - Serious systems for complex workflows",
-  description: "LedgerLine designs and builds backend-heavy internal systems in Bubble for teams operating in real-world environments. Our work focuses on workflow design, data modeling, and guardrails that reduce user-caused errors.",
+  title: "Docksmith - Systems and automation for operational control",
+  description: "Docksmith builds backend-heavy internal systems that enforce workflow logic, orchestrate operations, and maintain system boundaries under scale.",
 };
 
 export default function RootLayout({
@@ -18,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.variable} ${jetbrainsMono.variable} font-sans`}>
         <Header />
         <main>{children}</main>
         <Footer />

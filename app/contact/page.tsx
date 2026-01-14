@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact - LedgerLine",
-  description: "Tell us about your system and how we can help.",
+  title: "Contact - Docksmith",
+  description: "Discuss your operations system requirements and backend architecture needs.",
 };
 
 export default function ContactPage() {
@@ -15,7 +15,7 @@ export default function ContactPage() {
             Talk to us.
           </h1>
           <p className="text-xl text-accent-muted leading-relaxed">
-            Tell us about your system and how we can help.
+            Describe your operations workflow and backend requirements.
           </p>
         </div>
 

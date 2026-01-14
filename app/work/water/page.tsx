@@ -4,12 +4,12 @@ import CaseStudyTemplate from "@/components/CaseStudyTemplate";
 import { notFound } from "next/navigation";
 
 export const metadata: Metadata = {
-  title: "Compliance & Lifecycle Tracking - LedgerLine",
-  description: "Centralized lifecycle management with enforced states and full audit trail.",
+  title: "Regulated Water Operations Engine - Docksmith",
+  description: "A centralized system for managing regulated water assets and locations, enforcing compliance workflows, and producing audit-ready records on demand.",
 };
 
-export default function ComplianceTrackingPage() {
-  const caseStudy = getCaseStudyBySlug("compliance-tracking");
+export default function WaterPage() {
+  const caseStudy = getCaseStudyBySlug("water");
   
   if (!caseStudy) {
     notFound();

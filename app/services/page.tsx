@@ -1,83 +1,84 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import PageHero from "@/components/PageHero";
 
 export const metadata: Metadata = {
-  title: "Services - LedgerLine",
-  description: "We specialize in the systems that run your business: data, logic, and workflow.",
+  title: "Services - Docksmith",
+  description: "Backend architecture, workflow orchestration, and enforced system boundaries for operational control.",
 };
 
 export default function ServicesPage() {
   return (
-    <div className="py-24 px-6">
-      <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-semibold text-foreground mb-6">
-            Operations Infrastructure.
-          </h1>
-          <p className="text-xl text-accent-muted max-w-3xl mx-auto leading-relaxed">
-            We specialize in the systems that run your business.
-          </p>
-        </div>
+    <div>
+      <PageHero
+        eyebrow="SERVICES"
+        title="Backend architecture for operational control."
+        subtitle="State enforcement at the data layer. Workflow orchestration through validated transitions. System boundaries that hold under load."
+        imageSrc="/brand/images/system-architecture.png"
+      />
 
-        <div className="space-y-12 mb-16">
-          <div className="border border-border rounded-md p-8">
-            <h2 className="text-2xl font-semibold text-foreground mb-4">
-              Custom Internal Tools
-            </h2>
-            <p className="text-accent-muted leading-relaxed">
-              Purpose-built apps that replace fragile spreadsheets and email-driven processes. We design for the people who need to use the system daily, with clear workflows and enforced data integrity.
-            </p>
-          </div>
+      <section className="py-20 px-6">
+        <div className="max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-6 mb-16">
+            <div className="bg-white border border-slate-200 rounded-lg p-8 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">
+              <h2 className="text-xl font-semibold text-foreground mb-4">
+                Internal Operations Systems
+              </h2>
+              <p className="text-accent-muted leading-relaxed">
+                Backend platforms that orchestrate multi-step workflows with state validation, role-based permissions, and complete modification logging. Built to replace spreadsheet processes with enforced system logic.
+              </p>
+            </div>
 
-          <div className="border border-border rounded-md p-8">
-            <h2 className="text-2xl font-semibold text-foreground mb-4">
-              State-Driven Workflows
-            </h2>
-            <p className="text-accent-muted leading-relaxed">
-              Systems that enforce your business rules and provide a clear audit trail for every action. We build workflows that prevent errors while allowing for controlled exceptions when needed.
-            </p>
-          </div>
+            <div className="bg-white border border-slate-200 rounded-lg p-8 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">
+              <h2 className="text-xl font-semibold text-foreground mb-4">
+                State Enforcement Engine
+              </h2>
+              <p className="text-accent-muted leading-relaxed">
+                Workflow logic encoded as database constraints. State transitions validated before execution. Controlled overrides logged with full attribution. Business rules enforced at the data layer.
+              </p>
+            </div>
 
-          <div className="border border-border rounded-md p-8">
-            <h2 className="text-2xl font-semibold text-foreground mb-4">
-              Operations Dashboards
-            </h2>
-            <p className="text-accent-muted leading-relaxed">
-              Real-time visibility into complex processes with data you can actually trust. Role-based views ensure teams see what's relevant to them without overwhelming noise.
-            </p>
-          </div>
+            <div className="bg-white border border-slate-200 rounded-lg p-8 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">
+              <h2 className="text-xl font-semibold text-foreground mb-4">
+                Data Architecture & Modeling
+              </h2>
+              <p className="text-accent-muted leading-relaxed">
+                Schema design that enforces referential integrity and system boundaries. Data models built for scale, with proper indexing and query optimization from the start.
+              </p>
+            </div>
 
-          <div className="border border-border rounded-md p-8">
-            <h2 className="text-2xl font-semibold text-foreground mb-4">
-              Workflow Automation
-            </h2>
-            <p className="text-accent-muted leading-relaxed">
-              Integrating your core systems to ensure data moves correctly without manual intervention. We focus on reliability and traceability over clever integrations that break.
-            </p>
+            <div className="bg-white border border-slate-200 rounded-lg p-8 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">
+              <h2 className="text-xl font-semibold text-foreground mb-4">
+                System Integration & Orchestration
+              </h2>
+              <p className="text-accent-muted leading-relaxed">
+                API orchestration that coordinates data flow between core systems. Built for reliability and error handling, with retry logic and dead letter queues where needed.
+              </p>
+            </div>
           </div>
-        </div>
 
         <div className="bg-muted rounded-md p-8 mb-16">
           <h2 className="text-2xl font-semibold text-foreground mb-4">
-            The Approach
+            Stack & Execution
           </h2>
           <p className="text-accent-muted leading-relaxed mb-4">
-            We use Bubble to build your backend logic and internal interfaces. It allows us to deliver complex business rules with the architectural rigor of a custom-coded system, at a fraction of the time and cost.
+            We build on Bubble for rapid backend development with full database control and API orchestration. The platform provides the infrastructure while we architect the system logic, state enforcement, and data model.
           </p>
           <p className="text-accent-muted leading-relaxed">
-            We prioritize long-term maintainability over platform-specific gimmicks. The systems we build are designed to be owned and managed by your team, not locked into vendor dependencies.
+            Systems are designed for your team to own. You get full access to the database structure, business logic, and API integrations. No vendor lock-in, no hidden abstractions.
           </p>
         </div>
 
-        <div className="text-center">
-          <Link
-            href="/contact"
-            className="inline-block bg-accent-primary text-white px-8 py-3 rounded-md hover:bg-opacity-90 transition-all font-medium"
-          >
-            Talk to us about your system
-          </Link>
+          <div className="text-center">
+            <Link
+              href="/contact"
+              className="inline-block bg-accent-primary text-foreground px-8 py-3 rounded-md hover:brightness-90 transition-all font-medium"
+            >
+              Talk to us about your system
+            </Link>
+          </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 }

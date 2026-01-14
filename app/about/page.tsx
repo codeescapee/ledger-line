@@ -1,53 +1,57 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import PageHero from "@/components/PageHero";
 
 export const metadata: Metadata = {
-  title: "About - LedgerLine",
-  description: "A specialized studio focused on building serious internal systems for complex workflows.",
+  title: "About - Docksmith",
+  description: "Systems and automation studio focused on backend architecture, workflow orchestration, and operational control.",
 };
 
 export default function AboutPage() {
   return (
-    <div className="py-24 px-6">
-      <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-semibold text-foreground mb-6">
-            Small studio. Personal touch. Clear accountability.
-          </h1>
-        </div>
+    <div>
+      <PageHero
+        eyebrow="ABOUT"
+        title="Backend-focused. Senior-level execution."
+        subtitle="Docksmith is a systems studio focused on backend architecture and workflow enforcement. The architect who designs your system delivers it."
+        imageSrc="/brand/images/system-architecture.png"
+      />
 
-        <div className="prose prose-lg max-w-none space-y-8">
-          <p className="text-xl text-accent-muted leading-relaxed">
-            LedgerLine is a specialized studio, not a high-volume agency. We work with a limited number of clients at a time to ensure that every system we build receives senior-level attention.
-          </p>
+      <section className="py-20 px-6">
+        <div className="max-w-3xl mx-auto">
+          <div className="space-y-8">
+            <p className="text-lg text-accent-muted leading-relaxed">
+              Docksmith builds internal operations systems where state enforcement and data integrity are non-negotiable. Our work centers on backend architecture, workflow orchestration, and system boundaries that hold under operational load.
+            </p>
 
-          <p className="text-accent-muted leading-relaxed">
-            Our work is for teams where reliability, traceability, and maintainability matter more than surface polish. We build systems for people who need their data to be correct and their workflows to be enforceable. You work directly with the person responsible for your system's architecture—from the first discovery meeting to the final handoff.
-          </p>
+            <p className="text-lg text-accent-muted leading-relaxed">
+              You work directly with the senior engineer responsible for your system architecture—from initial state modeling through to production deployment and handoff documentation.
+            </p>
 
-          <div className="bg-muted rounded-md p-8 my-12">
-            <h2 className="text-2xl font-semibold text-foreground mb-4">Studio Philosophy</h2>
-            <p className="text-accent-muted leading-relaxed mb-4">
-              Most internal tools fail because they prioritize speed over structure. They're built quickly, look good in demos, but collapse under the weight of real-world complexity.
-            </p>
-            <p className="text-accent-muted leading-relaxed mb-4">
-              We believe that internal systems should be invisible—they should just work, preventing errors and providing a clear trail of what happened and why. We value reliability, maintainability, and data integrity above all else.
-            </p>
-            <p className="text-accent-muted leading-relaxed">
-              When you need a system that will hold up over time, that can handle exceptions without breaking, and that your team can actually trust—that's when you need LedgerLine.
-            </p>
+            <div className="bg-slate-50 border border-slate-200 rounded-lg p-8 my-12">
+              <h2 className="text-2xl font-semibold text-foreground mb-4">Approach</h2>
+              <p className="text-accent-muted leading-relaxed mb-4">
+                Most internal tools fail because data models are shallow and business logic lives in the UI layer. They work for demos but break under real operational complexity.
+              </p>
+              <p className="text-accent-muted leading-relaxed mb-4">
+                We architect systems where validation happens at the database layer, state transitions are explicitly modeled, and workflow logic is enforced through system constraints—not user discipline.
+              </p>
+              <p className="text-accent-muted leading-relaxed">
+                Systems are built for your team to operate and maintain. You receive complete backend access, schema documentation, and no proprietary abstractions.
+              </p>
+            </div>
+
+            <div className="text-center mt-12">
+              <Link
+                href="/contact"
+                className="inline-block bg-accent-primary text-foreground px-8 py-3 rounded-md hover:brightness-90 transition-all font-medium"
+              >
+                Work with us
+              </Link>
+            </div>
           </div>
-
-          <div className="text-center mt-16">
-            <Link
-              href="/contact"
-              className="inline-block bg-accent-primary text-white px-8 py-3 rounded-md hover:bg-opacity-90 transition-all font-medium"
-            >
-              Work with us
-            </Link>
-          </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 }

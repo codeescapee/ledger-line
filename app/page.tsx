@@ -1,25 +1,26 @@
 import Link from "next/link";
 import Image from "next/image";
 import TestimonialSlider from "@/components/TestimonialSlider";
+import SystemDiagram from "@/components/SystemDiagram";
 
 const testimonials = [
   {
-    quote: "LedgerLine took our messy spreadsheet process and turned it into a rock-solid operations tool. We haven't missed a handoff since.",
+    quote: "Docksmith replaced our spreadsheet chaos with enforced workflows. Handoffs are now systematic, not guesswork.",
     attribution: "Sarah M.",
     role: "Operations Director",
     industry: "Manufacturing"
   },
   {
-    quote: "The quoting system they built has completely removed the bottleneck in our sales cycle. It's fast, accurate, and reliable.",
+    quote: "The system they built enforces our business rules at the data layer. No more bottlenecks from manual pricing.",
     attribution: "James K.",
     role: "Head of Sales",
     industry: "Logistics"
   },
   {
-    quote: "They understood our compliance requirements better than we did. The audit trail they built saved us during our last review.",
+    quote: "They built state enforcement into the core logic. Our audit trail is now a system function, not a spreadsheet.",
     attribution: "Maria L.",
-    role: "Compliance Manager",
-    industry: "Healthcare Operations"
+    role: "Operations Manager",
+    industry: "Distribution"
   }
 ];
 
@@ -32,15 +33,15 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-6xl font-semibold text-foreground mb-6 leading-tight">
-                Serious systems for complex workflows.
+                Backend logic. System boundaries. Enforcement under scale.
               </h1>
               <p className="text-xl text-accent-muted leading-relaxed mb-8">
-                LedgerLine designs and builds backend-heavy internal systems in Bubble for teams operating in real-world environments. Our work focuses on workflow design, data modeling, and guardrails that reduce user-caused errors while still allowing controlled exceptions.
+                Docksmith builds internal systems that orchestrate operations through enforced workflows and validated state transitions. We focus on backend architecture, data integrity, and system boundaries that hold under load.
               </p>
               <div className="flex gap-4">
                 <Link
                   href="/contact"
-                  className="bg-accent-primary text-white px-8 py-3 rounded-md hover:bg-opacity-90 transition-all font-medium"
+                  className="bg-accent-primary text-foreground px-8 py-3 rounded-md hover:brightness-90 transition-all font-medium"
                 >
                   Talk to us
                 </Link>
@@ -54,11 +55,11 @@ export default function Home() {
             </div>
             <div className="hidden md:block">
               <Image
-                src="/brand/images/hero-system-flow.png"
+                src="/brand/images/system-architecture.png"
                 alt="System workflow architecture"
                 width={600}
                 height={450}
-                className="rounded-lg opacity-90"
+                className="w-full h-auto opacity-90"
                 priority
               />
             </div>
@@ -71,21 +72,21 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-3 gap-12">
             <div>
-              <h3 className="text-xl font-semibold text-foreground mb-4">Architecture First</h3>
+              <h3 className="text-xl font-semibold text-foreground mb-4">Backend Architecture</h3>
               <p className="text-accent-muted leading-relaxed">
-                We lead with data modeling and system design. A tool is only as strong as its underlying logic.
+                Data modeling and state logic come first. System integrity is enforced at the database layer, not the UI.
               </p>
             </div>
             <div>
-              <h3 className="text-xl font-semibold text-foreground mb-4">Workflow Guardrails</h3>
+              <h3 className="text-xl font-semibold text-foreground mb-4">Enforced Workflows</h3>
               <p className="text-accent-muted leading-relaxed">
-                We build systems that reduce user error while allowing for controlled exceptions. We prioritize reliability over surface polish.
+                State transitions are validated. Business rules are encoded as system constraints. Controlled overrides are logged and attributed.
               </p>
             </div>
             <div>
-              <h3 className="text-xl font-semibold text-foreground mb-4">Direct Accountability</h3>
+              <h3 className="text-xl font-semibold text-foreground mb-4">Senior-Level Execution</h3>
               <p className="text-accent-muted leading-relaxed">
-                You work directly with the senior person responsible for architecture and delivery. No agency handoffs.
+                The architect who designs your system delivers it. No handoffs to junior developers or offshore teams.
               </p>
             </div>
           </div>
@@ -95,15 +96,15 @@ export default function Home() {
       {/* Featured Work Section */}
       <section className="py-28 px-6">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-semibold text-foreground mb-16 text-center">Proven Systems</h2>
+          <h2 className="text-3xl font-semibold text-foreground mb-16 text-center">Systems in Production</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <Link href="/work/quoting-system" className="group">
               <div className="border-t-2 border-slate-200 border-x border-b border-border rounded-md p-8 hover:border-slate-300 transition-all">
                 <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-accent-primary transition-colors">
-                  Automated Manufacturing Quoting System
+                  Manufacturing Quoting Engine
                 </h3>
                 <p className="text-accent-muted mb-6 leading-relaxed">
-                  Instant, error-free quotes and automatic order sync.
+                  Enforced pricing logic with automatic order synchronization and production handoff.
                 </p>
                 <span className="text-sm text-accent-primary font-medium inline-flex items-center gap-1 group-hover:gap-2 transition-all">
                   Read case study <span className="transition-transform">→</span>
@@ -114,10 +115,10 @@ export default function Home() {
             <Link href="/work/internal-ops" className="group">
               <div className="border-t-2 border-slate-200 border-x border-b border-border rounded-md p-8 hover:border-slate-300 transition-all">
                 <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-accent-primary transition-colors">
-                  Internal Operations System
+                  Operations Orchestration Platform
                 </h3>
                 <p className="text-accent-muted mb-6 leading-relaxed">
-                  Clearer ownership and significant reduction in manual handoff errors.
+                  State-driven workflows with role enforcement and complete modification logging.
                 </p>
                 <span className="text-sm text-accent-primary font-medium inline-flex items-center gap-1 group-hover:gap-2 transition-all">
                   Read case study <span className="transition-transform">→</span>
@@ -128,10 +129,10 @@ export default function Home() {
             <Link href="/work/compliance-tracking" className="group">
               <div className="border-t-2 border-slate-200 border-x border-b border-border rounded-md p-8 hover:border-slate-300 transition-all">
                 <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-accent-primary transition-colors">
-                  Compliance & Lifecycle Tracking
+                  Asset Lifecycle Management
                 </h3>
                 <p className="text-accent-muted mb-6 leading-relaxed">
-                  Reduced manual effort and absolute data confidence for audits.
+                  Immutable state tracking with enforced documentation gates and automated deadline monitoring.
                 </p>
                 <span className="text-sm text-accent-primary font-medium inline-flex items-center gap-1 group-hover:gap-2 transition-all">
                   Read case study <span className="transition-transform">→</span>
@@ -152,17 +153,24 @@ export default function Home() {
 
       {/* Process Highlight Section */}
       <section className="py-28 px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-semibold text-foreground mb-6">How we operate</h2>
-          <p className="text-xl text-accent-muted leading-relaxed mb-8">
-            We start with your logic, not your UI. We map the nuances of your workflow before building.
-          </p>
-          <Link
-            href="/process"
-            className="inline-block border border-border text-foreground px-8 py-3 rounded-md hover:bg-background transition-all font-medium"
-          >
-            See our full process
-          </Link>
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl font-semibold text-foreground mb-6">How we build</h2>
+              <p className="text-xl text-accent-muted leading-relaxed mb-8">
+                Backend architecture comes first. We model your state logic and validation rules before touching the interface.
+              </p>
+              <Link
+                href="/process"
+                className="inline-block border border-border text-foreground px-8 py-3 rounded-md hover:bg-background transition-all font-medium"
+              >
+                See our full process
+              </Link>
+            </div>
+            <div className="hidden md:block">
+              <SystemDiagram />
+            </div>
+          </div>
         </div>
       </section>
     </div>

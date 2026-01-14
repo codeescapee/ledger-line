@@ -10,13 +10,17 @@ const config: Config = {
     extend: {
       colors: {
         background: "#ffffff",
-        foreground: "#0f172a",
+        foreground: "#0F1720",
         muted: "#f8fafc",
         accent: {
-          primary: "#1e293b",
+          primary: "#2FB6D8",
           muted: "#64748b",
         },
         border: "#e2e8f0",
+      },
+      fontFamily: {
+        sans: ["Inter", "sans-serif"],
+        mono: ["JetBrains Mono", "monospace"],
       },
     },
   },

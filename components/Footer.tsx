@@ -6,9 +6,9 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 py-12">
         <div className="grid md:grid-cols-3 gap-8">
           <div>
-            <h3 className="font-semibold text-foreground mb-4">LedgerLine</h3>
+            <h3 className="font-semibold text-foreground mb-4">Docksmith</h3>
             <p className="text-accent-muted text-sm">
-              Serious systems for complex workflows.
+              Systems and automation for operational control.
             </p>
           </div>
           
@@ -37,7 +37,7 @@ export default function Footer() {
             <h4 className="font-semibold text-foreground mb-4">Get in touch</h4>
             <Link
               href="/contact"
-              className="inline-block bg-accent-primary text-white px-6 py-2 rounded-md hover:bg-opacity-90 transition-all text-sm"
+              className="inline-block bg-accent-primary text-foreground px-6 py-2 rounded-md hover:brightness-90 transition-all text-sm"
             >
               Talk to us
             </Link>
@@ -45,7 +45,7 @@ export default function Footer() {
         </div>
         
         <div className="mt-12 pt-8 border-t border-border text-center text-accent-muted text-sm">
-          © {new Date().getFullYear()} LedgerLine. All rights reserved.
+          © {new Date().getFullYear()} Docksmith. All rights reserved.
         </div>
       </div>
     </footer>

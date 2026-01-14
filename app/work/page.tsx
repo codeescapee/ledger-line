@@ -1,80 +1,74 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
+import PageHero from "@/components/PageHero";
+import { caseStudies } from "@/lib/caseStudies";
 
 export const metadata: Metadata = {
-  title: "Work - LedgerLine",
-  description: "Internal tools and operations systems where correctness, traceability, and maintainability matter more than speed.",
+  title: "Work - Docksmith",
+  description: "Backend systems and workflow orchestration platforms built for operational control and enforcement at scale.",
 };
 
 export default function WorkPage() {
   return (
-    <div className="py-24 px-6">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-semibold text-foreground mb-6">
-            Proven Systems
-          </h1>
-          <p className="text-xl text-accent-muted max-w-3xl mx-auto leading-relaxed">
-            Internal tools and operations systems where correctness, traceability, and maintainability matter more than speed.
-          </p>
+    <div>
+      <PageHero
+        title="Systems in Production"
+        subtitle="Backend platforms orchestrating operations through enforced state logic, validated transitions, and complete audit trails."
+        imageSrc="/brand/images/system-architecture.png"
+      />
+
+      <section className="py-20 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8">
+            {caseStudies.map((caseStudy) => (
+              <Link 
+                key={caseStudy.slug} 
+                href={`/work/${caseStudy.slug}`} 
+                className="group"
+              >
+                <div className="bg-white border border-slate-200 rounded-lg overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full flex flex-col">
+                  {/* Thumbnail */}
+                  <div className="relative aspect-video bg-slate-100 overflow-hidden">
+                    <Image
+                      src={caseStudy.thumbnailImage?.src || caseStudy.heroImage.src}
+                      alt={caseStudy.thumbnailImage?.alt || caseStudy.heroImage.alt}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+
+                  {/* Content */}
+                  <div className="p-6 flex flex-col flex-grow">
+                    <h2 className="text-xl font-semibold text-foreground mb-3 group-hover:text-accent-primary transition-colors">
+                      {caseStudy.title}
+                    </h2>
+                    <p className="text-accent-muted mb-4 leading-relaxed text-sm flex-grow">
+                      {caseStudy.summary}
+                    </p>
+
+                    {/* Pills row */}
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {caseStudy.outcomes.slice(0, 2).map((outcome, idx) => (
+                        <span 
+                          key={idx}
+                          className="text-xs px-3 py-1.5 bg-foreground text-white rounded-full font-medium"
+                        >
+                          {outcome}
+                        </span>
+                      ))}
+                    </div>
+
+                    <span className="text-sm text-accent-primary font-medium inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+                      Read case study <span className="transition-transform">→</span>
+                    </span>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
-
-        <div className="grid md:grid-cols-3 gap-8">
-          <Link href="/work/quoting-system" className="group">
-            <div className="border border-border rounded-md p-8 hover:shadow-lg transition-shadow h-full">
-              <h2 className="text-2xl font-semibold text-foreground mb-4 group-hover:text-accent-primary transition-colors">
-                Automated Manufacturing Quoting System
-              </h2>
-              <p className="text-accent-muted mb-6 leading-relaxed">
-                A self-serve quoting engine with complex pricing logic, automated file parsing, and Stripe integration.
-              </p>
-              <div className="mb-4">
-                <span className="text-sm font-medium text-foreground">Outcome:</span>
-                <p className="text-accent-muted mt-1">
-                  Instant, error-free quotes and automatic order sync.
-                </p>
-              </div>
-              <span className="text-sm text-accent-primary font-medium">Read case study →</span>
-            </div>
-          </Link>
-
-          <Link href="/work/internal-ops" className="group">
-            <div className="border border-border rounded-md p-8 hover:shadow-lg transition-shadow h-full">
-              <h2 className="text-2xl font-semibold text-foreground mb-4 group-hover:text-accent-primary transition-colors">
-                Internal Operations System
-              </h2>
-              <p className="text-accent-muted mb-6 leading-relaxed">
-                Role-based internal tool with state-driven workflows and guardrails replacing spreadsheet-driven processes.
-              </p>
-              <div className="mb-4">
-                <span className="text-sm font-medium text-foreground">Outcome:</span>
-                <p className="text-accent-muted mt-1">
-                  Clearer ownership and significant reduction in manual handoff errors.
-                </p>
-              </div>
-              <span className="text-sm text-accent-primary font-medium">Read case study →</span>
-            </div>
-          </Link>
-
-          <Link href="/work/compliance-tracking" className="group">
-            <div className="border border-border rounded-md p-8 hover:shadow-lg transition-shadow h-full">
-              <h2 className="text-2xl font-semibold text-foreground mb-4 group-hover:text-accent-primary transition-colors">
-                Compliance & Lifecycle Tracking
-              </h2>
-              <p className="text-accent-muted mb-6 leading-relaxed">
-                Centralized lifecycle management with enforced states and full audit trail.
-              </p>
-              <div className="mb-4">
-                <span className="text-sm font-medium text-foreground">Outcome:</span>
-                <p className="text-accent-muted mt-1">
-                  Reduced manual effort and absolute data confidence for audits.
-                </p>
-              </div>
-              <span className="text-sm text-accent-primary font-medium">Read case study →</span>
-            </div>
-          </Link>
-        </div>
-      </div>
+      </section>
     </div>
   );
 }

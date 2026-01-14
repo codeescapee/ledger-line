@@ -4,12 +4,12 @@ import CaseStudyTemplate from "@/components/CaseStudyTemplate";
 import { notFound } from "next/navigation";
 
 export const metadata: Metadata = {
-  title: "Internal Operations System - LedgerLine",
-  description: "Role-based internal tool with state-driven workflows and guardrails replacing spreadsheet-driven processes.",
+  title: "Loan Lifecycle & Payments Engine - Docksmith",
+  description: "An end-to-end loan lifecycle system handling origination, contracts, repayments, exceptions, and reporting with strict enforcement of financial state transitions.",
 };
 
-export default function InternalOpsPage() {
-  const caseStudy = getCaseStudyBySlug("internal-ops");
+export default function LendingPage() {
+  const caseStudy = getCaseStudyBySlug("lending");
   
   if (!caseStudy) {
     notFound();

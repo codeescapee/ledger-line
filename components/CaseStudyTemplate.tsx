@@ -50,27 +50,26 @@ export default function CaseStudyTemplate({ caseStudy }: CaseStudyTemplateProps)
                 <TagPills
                   outcomes={caseStudy.outcomes}
                   capabilities={caseStudy.capabilities}
-                  tools={caseStudy.tools}
                 />
               </div>
 
               {/* CTA */}
               <div>
-                <Link
-                  href="/contact"
-                  className="bg-accent-primary text-white px-6 py-3 rounded-md hover:bg-opacity-90 transition-all font-medium inline-block"
-                >
-                  Talk to us
-                </Link>
+              <Link
+                href="/contact"
+                className="bg-accent-primary text-foreground px-6 py-3 rounded-md hover:brightness-90 transition-all font-medium inline-block"
+              >
+                Talk to us
+              </Link>
               </div>
             </div>
 
             {/* Right Column - Framed Image (40%) */}
             <div className="lg:col-span-2">
-              <div className="bg-white border border-slate-200 rounded-xl p-3 shadow-sm">
+              <div className="bg-white border border-slate-200 rounded-xl p-3 shadow-lg">
                 <Image
-                  src={caseStudy.heroImage}
-                  alt={caseStudy.title}
+                  src={caseStudy.heroImage.src}
+                  alt={caseStudy.heroImage.alt}
                   width={600}
                   height={450}
                   className="rounded-lg w-full h-auto"
