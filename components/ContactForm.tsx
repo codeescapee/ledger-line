@@ -73,7 +73,7 @@ export default function ContactForm() {
     <form onSubmit={handleSubmit} className="space-y-8">
       {/* Basics */}
       <div>
-        <h3 className="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-4">Basics</h3>
+        <h3 className="text-sm font-semibold text-text-secondary uppercase tracking-wider mb-6">Basics</h3>
         <div className="grid md:grid-cols-2 gap-4">
           <div>
             <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
@@ -86,7 +86,7 @@ export default function ContactForm() {
               required
               value={formData.name}
               onChange={handleChange}
-              className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-accent-primary"
+              className="w-full px-4 py-3 bg-muted border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-accent-primary"
             />
           </div>
 
@@ -101,7 +101,7 @@ export default function ContactForm() {
               required
               value={formData.email}
               onChange={handleChange}
-              className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-accent-primary"
+              className="w-full px-4 py-3 bg-muted border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-accent-primary"
             />
           </div>
 
@@ -115,7 +115,7 @@ export default function ContactForm() {
               required
               value={formData.work_type}
               onChange={handleChange}
-              className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-accent-primary"
+              className="w-full px-4 py-3 bg-muted border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-accent-primary"
             >
               <option value="">Select type</option>
               <option value="New app">New app</option>
@@ -128,7 +128,7 @@ export default function ContactForm() {
 
       {/* Project */}
       <div>
-        <h3 className="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-4">Project</h3>
+        <h3 className="text-sm font-semibold text-text-secondary uppercase tracking-wider mb-6">Project</h3>
         <div className="space-y-4">
           <div>
             <label htmlFor="success" className="block text-sm font-medium text-foreground mb-2">
@@ -142,7 +142,7 @@ export default function ContactForm() {
               placeholder="Describe what outcome would make this project successful"
               value={formData.success}
               onChange={handleChange}
-              className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-accent-primary"
+              className="w-full px-4 py-3 bg-muted border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-accent-primary"
             />
           </div>
 
@@ -156,7 +156,7 @@ export default function ContactForm() {
                 name="timeline"
                 value={formData.timeline}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-accent-primary"
+                className="w-full px-4 py-3 bg-muted border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-accent-primary"
               >
                 <option value="">Select timeline</option>
                 <option value="ASAP">ASAP</option>
@@ -174,7 +174,7 @@ export default function ContactForm() {
                 name="budget"
                 value={formData.budget}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-accent-primary"
+                className="w-full px-4 py-3 bg-muted border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-accent-primary"
               >
                 <option value="">Select budget range</option>
                 <option value="Under $5k (not typical)">Under $5k (not typical)</option>
@@ -194,7 +194,7 @@ export default function ContactForm() {
                 name="funding"
                 value={formData.funding}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-accent-primary"
+                className="w-full px-4 py-3 bg-muted border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-accent-primary"
               >
                 <option value="">Select status</option>
                 <option value="Company budget approved">Company budget approved</option>
@@ -210,7 +210,7 @@ export default function ContactForm() {
 
       {/* Context */}
       <div>
-        <h3 className="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-4">Context</h3>
+        <h3 className="text-sm font-semibold text-text-secondary uppercase tracking-wider mb-6">Context</h3>
         <div className="space-y-4">
           <div className="grid md:grid-cols-2 gap-4">
             <div>
@@ -223,7 +223,7 @@ export default function ContactForm() {
                 name="website"
                 value={formData.website}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-accent-primary"
+                className="w-full px-4 py-3 bg-muted border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-accent-primary"
               />
             </div>
 
@@ -236,7 +236,7 @@ export default function ContactForm() {
                 name="how_found"
                 value={formData.how_found}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-accent-primary"
+                className="w-full px-4 py-3 bg-muted border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-accent-primary"
               >
                 <option value="">Select one</option>
                 <option value="Bubble">Bubble</option>
@@ -259,7 +259,7 @@ export default function ContactForm() {
               rows={3}
               value={formData.notes}
               onChange={handleChange}
-              className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-accent-primary"
+              className="w-full px-4 py-3 bg-muted border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-accent-primary"
             />
           </div>
         </div>
@@ -280,7 +280,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="w-full bg-accent-primary text-foreground px-8 py-3 rounded-md hover:brightness-90 transition-all font-medium disabled:opacity-50 disabled:cursor-not-allowed"
+        className="w-full bg-accent-primary text-white px-8 py-3 rounded-md hover:brightness-90 transition-all font-medium disabled:opacity-50 disabled:cursor-not-allowed"
       >
         {isSubmitting ? "Sending..." : "Send message"}
       </button>
