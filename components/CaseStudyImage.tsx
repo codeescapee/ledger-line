@@ -101,7 +101,7 @@ function QuotingMockup({ color, accent }: { color: string; accent: string }) {
       ))}
 
       {/* Main: Upload area */}
-      <rect x="140" y="50" width="220" height="100" rx="8" fill={color} opacity="0.03" stroke={color} strokeWidth="1" strokeDasharray="6 4" opacity="0.15" />
+      <rect x="140" y="50" width="220" height="100" rx="8" fill={color} stroke={color} strokeWidth="1" strokeDasharray="6 4" opacity="0.15" />
       <rect x="220" y="80" width="60" height="8" rx="4" fill={color} opacity="0.2" />
       <rect x="210" y="96" width="80" height="6" rx="3" fill={color} opacity="0.1" />
       {/* Upload icon */}
