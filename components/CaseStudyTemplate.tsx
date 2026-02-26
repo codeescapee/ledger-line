@@ -34,49 +34,49 @@ export default function CaseStudyTemplate({ caseStudy }: CaseStudyTemplateProps)
             )}
           </div>
 
-          <div className="grid lg:grid-cols-5 gap-12 items-start">
-            {/* Left Column - Content (60%) */}
-            <div className="lg:col-span-3">
-              <h1 className="text-5xl md:text-6xl font-semibold tracking-tight leading-[1.05] text-foreground mb-6">
-                {caseStudy.title}
-              </h1>
-              
-              <p className="text-lg text-slate-600 leading-relaxed mb-8 max-w-prose">
-                {caseStudy.summary}
-              </p>
+          {/* Content — single column */}
+          <div className="max-w-3xl">
+            <h1 className="text-5xl md:text-6xl font-semibold tracking-tight leading-[1.05] text-foreground mb-6">
+              {caseStudy.title}
+            </h1>
 
-              {/* Tag Pills */}
-              <div className="mb-8">
-                <TagPills
-                  outcomes={caseStudy.outcomes}
-                  capabilities={caseStudy.capabilities}
-                />
-              </div>
+            <p className="text-lg text-slate-600 leading-relaxed mb-8 max-w-prose">
+              {caseStudy.summary}
+            </p>
 
-              {/* CTA */}
-              <div>
+            {/* Tag Pills */}
+            <div className="mb-8">
+              <TagPills
+                outcomes={caseStudy.outcomes}
+                capabilities={caseStudy.capabilities}
+              />
+            </div>
+
+            {/* CTA */}
+            <div>
               <Link
                 href="/contact"
                 className="bg-accent-primary text-foreground px-6 py-3 rounded-md hover:brightness-90 transition-all font-medium inline-block"
               >
                 Talk to us
               </Link>
-              </div>
             </div>
+          </div>
+        </div>
+      </section>
 
-            {/* Right Column - Framed Image (40%) */}
-            <div className="lg:col-span-2">
-              <div className="bg-white border border-slate-200 rounded-xl p-3 shadow-lg">
-                <Image
-                  src={caseStudy.heroImage.src}
-                  alt={caseStudy.heroImage.alt}
-                  width={600}
-                  height={450}
-                  className="rounded-lg w-full h-auto"
-                  priority
-                />
-              </div>
-            </div>
+      {/* Zone 3 — Hero Image */}
+      <section className="px-6 py-12 bg-slate-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="rounded-xl overflow-hidden" style={{ maxWidth: '1316px' }}>
+            <Image
+              src={caseStudy.heroImage.src}
+              alt={caseStudy.heroImage.alt}
+              width={1316}
+              height={620}
+              className="w-full h-auto"
+              priority
+            />
           </div>
         </div>
       </section>

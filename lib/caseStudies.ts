@@ -4,6 +4,7 @@ export interface CaseStudy {
   summary: string;
   outcomes: string[];
   capabilities: string[];
+  iconImage: { src: string; alt: string };
   thumbnailImage: { src: string; alt: string };
   heroImage: { src: string; alt: string };
   problem: string[];
@@ -18,8 +19,9 @@ export const caseStudies: CaseStudy[] = [
     summary: "A self-serve quoting system for a sheet-metal fabricator that turns uploaded design files into accurate, purchasable quotes in minutes instead of weeks.",
     outcomes: ["Instant quotes", "Pricing risk eliminated", "Orders auto-synced"],
     capabilities: ["Pricing engine", "File parsing", "State-driven workflows"],
-    thumbnailImage: { src: "/brand/images/case-studies/quoting-thumb.png", alt: "Manufacturing quoting system workflow" },
-    heroImage: { src: "/brand/images/case-studies/quoting-hero.png", alt: "Quoting engine architecture" },
+    iconImage: { src: "/brand/images/case-studies/quoting-icon.png", alt: "Quoting system icon" },
+    thumbnailImage: { src: "/brand/images/case-studies/quoting-thumb.svg", alt: "Manufacturing quoting data visualization" },
+    heroImage: { src: "/brand/images/case-studies/quoting-hero.png", alt: "Quoting engine product screenshot" },
     problem: [
       "Manual quoting process required days of engineering time with no standardized pricing logic. Quotes were calculated in disconnected spreadsheets, leading to inconsistent margins and pricing errors that sometimes went undetected until production.",
       "No validation existed between quote acceptance and production handoff. Orders entered manufacturing with incomplete specifications or incorrect pricing."
@@ -47,8 +49,9 @@ export const caseStudies: CaseStudy[] = [
     summary: "A multi-tenant inventory and order system with a customer portal, role-based workflows, and enforced ownership across internal teams and external users.",
     outcomes: ["Fewer errors", "Clear ownership", "Faster onboarding", "Reduced handoffs", "Inventory accuracy"],
     capabilities: ["Role-based workflows", "Permission enforcement", "Inventory states", "Order validation", "Admin overrides"],
-    thumbnailImage: { src: "/brand/images/case-studies/inventory-thumb.png", alt: "Inventory operations workflow" },
-    heroImage: { src: "/brand/images/case-studies/inventory-hero.png", alt: "Operations platform architecture" },
+    iconImage: { src: "/brand/images/case-studies/inventory-icon.png", alt: "Inventory system icon" },
+    thumbnailImage: { src: "/brand/images/case-studies/inventory-thumb.svg", alt: "Inventory operations data visualization" },
+    heroImage: { src: "/brand/images/case-studies/inventory-hero.png", alt: "Inventory operations product screenshot" },
     problem: [
       "Operations ran on spreadsheets and email handoffs with business logic embedded in undocumented Excel formulas. As team size grew, errors increased. When processes failed, no audit trail existed to determine what happened or who was responsible.",
       "Critical state transitions occurred through manual coordination. Incomplete handoffs created downstream failures that surfaced days later in production."
@@ -76,8 +79,9 @@ export const caseStudies: CaseStudy[] = [
     summary: "A centralized system for managing regulated water assets and locations, enforcing compliance workflows, and producing audit-ready records on demand.",
     outcomes: ["Audit-ready records", "Zero missed deadlines", "High data confidence", "Cross-site visibility"],
     capabilities: ["State-driven workflows", "Approval gates", "Role-based access", "Audit logging", "Immutable records", "Invalid-state prevention"],
-    thumbnailImage: { src: "/brand/images/case-studies/water-thumb.png", alt: "Water operations tracking system" },
-    heroImage: { src: "/brand/images/case-studies/water-hero.png", alt: "Compliance management architecture" },
+    iconImage: { src: "/brand/images/case-studies/water-icon.png", alt: "Water operations icon" },
+    thumbnailImage: { src: "/brand/images/case-studies/water-thumb.svg", alt: "Water operations data visualization" },
+    heroImage: { src: "/brand/images/case-studies/water-hero.png", alt: "Water operations product screenshot" },
     problem: [
       "Asset lifecycle tracking ran on disconnected spreadsheets across multiple locations. No centralized state management existed. Teams manually coordinated deadlines through email, leading to missed requirements and data fragmentation.",
       "When operational reviews occurred, teams reconstructed timelines from scattered records with no reliable audit trail. Historical changes were untraceable."
@@ -105,8 +109,9 @@ export const caseStudies: CaseStudy[] = [
     summary: "An end-to-end loan lifecycle system handling origination, contracts, repayments, exceptions, and reporting with strict enforcement of financial state transitions.",
     outcomes: ["Accurate balances", "Reliable repayments", "Fewer manual reviews", "Clear loan status", "Audit-ready reporting"],
     capabilities: ["Loan state machine", "Contract enforcement", "Payment scheduling", "Exception handling", "Balance reconciliation", "Lifecycle reporting"],
-    thumbnailImage: { src: "/brand/images/case-studies/lending-thumb.png", alt: "Loan lifecycle management system" },
-    heroImage: { src: "/brand/images/case-studies/lending-hero.png", alt: "Lending platform architecture" },
+    iconImage: { src: "/brand/images/case-studies/lending-icon.png", alt: "Lending system icon" },
+    thumbnailImage: { src: "/brand/images/case-studies/lending-thumb.svg", alt: "Loan lifecycle data visualization" },
+    heroImage: { src: "/brand/images/case-studies/lending-hero.png", alt: "Lending platform product screenshot" },
     problem: [
       "Loan management ran on fragmented systems with manual tracking of repayment schedules, contract terms, and balance calculations. State transitions between origination, active repayment, and closure required manual intervention with high error rates.",
       "Exception handling for late payments, early payoffs, and contract modifications occurred through email coordination with no systematic way to track modifications or ensure balance accuracy across the loan lifecycle."

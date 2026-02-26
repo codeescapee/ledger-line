@@ -28,21 +28,33 @@ export default function WorkPage() {
                 className="group"
               >
                 <div className="bg-white border border-slate-200 rounded-lg overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full flex flex-col">
-                  {/* Thumbnail */}
-                  <div className="relative aspect-video bg-slate-100 overflow-hidden">
+                  {/* Zone 2 — Thumbnail */}
+                  <div className="relative aspect-[8/5] overflow-hidden">
                     <Image
-                      src={caseStudy.thumbnailImage?.src || caseStudy.heroImage.src}
-                      alt={caseStudy.thumbnailImage?.alt || caseStudy.heroImage.alt}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                      src={caseStudy.thumbnailImage.src}
+                      alt={caseStudy.thumbnailImage.alt}
+                      width={800}
+                      height={500}
+                      className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                      unoptimized={caseStudy.thumbnailImage.src.endsWith('.svg')}
                     />
                   </div>
 
-                  {/* Content */}
+                  {/* Content with Zone 1 icon */}
                   <div className="p-6 flex flex-col flex-grow">
-                    <h2 className="text-xl font-semibold text-foreground mb-3 group-hover:text-accent-primary transition-colors">
-                      {caseStudy.title}
-                    </h2>
+                    <div className="flex items-start gap-4 mb-3">
+                      {/* Zone 1 — Icon */}
+                      <Image
+                        src={caseStudy.iconImage.src}
+                        alt={caseStudy.iconImage.alt}
+                        width={80}
+                        height={80}
+                        className="flex-shrink-0 -mt-12 relative z-10"
+                      />
+                      <h2 className="text-xl font-semibold text-foreground group-hover:text-accent-primary transition-colors pt-1">
+                        {caseStudy.title}
+                      </h2>
+                    </div>
                     <p className="text-accent-muted mb-4 leading-relaxed text-sm flex-grow">
                       {caseStudy.summary}
                     </p>
@@ -50,7 +62,7 @@ export default function WorkPage() {
                     {/* Pills row */}
                     <div className="flex flex-wrap gap-2 mb-4">
                       {caseStudy.outcomes.slice(0, 2).map((outcome, idx) => (
-                        <span 
+                        <span
                           key={idx}
                           className="text-xs px-3 py-1.5 bg-foreground text-white rounded-full font-medium"
                         >
