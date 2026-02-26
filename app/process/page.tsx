@@ -94,7 +94,7 @@ export default function ProcessPage() {
   return (
     <div>
       {/* Dark Hero */}
-      <section className="bg-gradient-hero pt-32 pb-20 px-6">
+      <section className="bg-gradient-hero pt-32 pb-14 px-6">
         <div className="max-w-6xl mx-auto">
           <FadeIn>
             <Eyebrow className="mb-6">Process</Eyebrow>
@@ -120,19 +120,17 @@ export default function ProcessPage() {
           <div className="space-y-0">
             {steps.map((step, index) => (
               <FadeIn key={step.number} delay={index * 0.1}>
-                <div className="relative flex gap-6 md:gap-8 pb-24 last:pb-0">
+                <div className="relative flex gap-6 md:gap-8">
                   {/* Timeline line + dot */}
                   <div className="flex flex-col items-center flex-shrink-0">
                     <div className="w-12 h-12 rounded-full bg-accent-primary text-white flex items-center justify-center font-bold text-lg shadow-glow-sm">
                       {step.number}
                     </div>
-                    {index < steps.length - 1 && (
-                      <div className="w-px flex-1 bg-border mt-4" />
-                    )}
+                    <div className="w-px flex-1 bg-border my-4" />
                   </div>
 
                   {/* Content */}
-                  <div className="flex-1 pt-1">
+                  <div className={`flex-1 pt-1 ${index < steps.length - 1 ? 'pb-[102px]' : 'pb-16'}`}>
                     <div className="flex flex-wrap items-center gap-3 mb-4">
                       <h2 className="text-xl md:text-2xl font-semibold text-foreground">
                         {step.title}
