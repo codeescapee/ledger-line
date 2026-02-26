@@ -1,0 +1,177 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0B1121"/>
+      <stop offset="50%" style="stop-color:#111827"/>
+      <stop offset="100%" style="stop-color:#0F172A"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#162035"/>
+      <stop offset="100%" style="stop-color:#0f1a2e"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#2FB6D8" stroke-width="0.15" opacity="0.2"/>
+    </pattern>
+    <clipPath id="calClip">
+      <rect x="110" y="76" width="664" height="388"/>
+    </clipPath>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#bg)"/>
+  <rect width="800" height="500" fill="url(#grid)"/>
+
+  <!-- Title -->
+  <text x="400" y="36" text-anchor="middle" font-family="'Courier New', monospace" font-size="10" fill="#2FB6D8" opacity="0.45" letter-spacing="3">WATER COMPLIANCE · DEADLINE MONITOR · SAMPLE CALENDAR</text>
+  <text x="400" y="60" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="white">February – March 2026</text>
+
+  <!-- ── LAYOUT CONSTANTS ──
+       Left label col: x=16 w=94 → ends at 110
+       Calendar area: x=110 → x=774  width=664
+       7 columns each = 664/7 = ~94.8px
+       Col centers: 110 + 47 = 157, +95=252, +95=347, +95=442(today), +95=537, +95=632, +95=727
+  -->
+
+  <!-- Week column headers (inside calendar area only) -->
+  <rect x="110" y="76" width="664" height="28" rx="4" fill="url(#cardGrad)" stroke="#2FB6D8" stroke-width="0.5" opacity="0.7"/>
+  <text x="157" y="94" text-anchor="middle" font-family="'Courier New', monospace" font-size="9" fill="#475569">FEB 11</text>
+  <text x="252" y="94" text-anchor="middle" font-family="'Courier New', monospace" font-size="9" fill="#475569">FEB 14</text>
+  <text x="347" y="94" text-anchor="middle" font-family="'Courier New', monospace" font-size="9" fill="#475569">FEB 18</text>
+  <text x="442" y="94" text-anchor="middle" font-family="'Courier New', monospace" font-size="9" fill="#2FB6D8" font-weight="700">FEB 25</text>
+  <text x="537" y="94" text-anchor="middle" font-family="'Courier New', monospace" font-size="9" fill="#475569">MAR 1</text>
+  <text x="632" y="94" text-anchor="middle" font-family="'Courier New', monospace" font-size="9" fill="#475569">MAR 7</text>
+  <text x="727" y="94" text-anchor="middle" font-family="'Courier New', monospace" font-size="9" fill="#475569">MAR 14</text>
+
+  <!-- TODAY pill under the FEB 25 header -->
+  <rect x="418" y="97" width="48" height="11" rx="5" fill="#2FB6D8" opacity="0.2"/>
+  <text x="442" y="103" text-anchor="middle" dominant-baseline="middle" font-family="'Courier New', monospace" font-size="7" fill="#2FB6D8">TODAY</text>
+
+  <!-- LEFT SITE LABEL COLUMN background -->
+  <rect x="16" y="76" width="92" height="388" rx="4" fill="url(#cardGrad)" stroke="#2FB6D8" stroke-width="0.5" opacity="0.5"/>
+
+  <!-- Site label header cell -->
+  <rect x="16" y="76" width="92" height="28" rx="4" fill="#162035"/>
+  <text x="62" y="94" text-anchor="middle" font-family="'Courier New', monospace" font-size="9" fill="#2FB6D8" opacity="0.5">SITE</text>
+
+  <!-- Vertical col dividers (clipped to calendar area) -->
+  <line x1="205" y1="104" x2="205" y2="464" stroke="#2FB6D8" stroke-width="0.5" opacity="0.1"/>
+  <line x1="300" y1="104" x2="300" y2="464" stroke="#2FB6D8" stroke-width="0.5" opacity="0.1"/>
+  <line x1="395" y1="104" x2="395" y2="464" stroke="#2FB6D8" stroke-width="0.5" opacity="0.1"/>
+  <line x1="490" y1="104" x2="490" y2="464" stroke="#2FB6D8" stroke-width="0.5" opacity="0.1"/>
+  <line x1="585" y1="104" x2="585" y2="464" stroke="#2FB6D8" stroke-width="0.5" opacity="0.1"/>
+  <line x1="680" y1="104" x2="680" y2="464" stroke="#2FB6D8" stroke-width="0.5" opacity="0.1"/>
+
+  <!-- TODAY vertical line -->
+  <line x1="442" y1="104" x2="442" y2="464" stroke="#2FB6D8" stroke-width="1.5" opacity="0.4" stroke-dasharray="4,3"/>
+
+  <!-- ── ROW HEIGHTS: each row = 58px, starting y=104 ──
+       Row 1 (Site A): 104–162
+       Row 2 (Site B): 162–220
+       Row 3 (Site C): 220–278
+       Row 4 (Site D): 278–336
+       Row 5 (Site E): 336–394
+       Row 6 (Site F): 394–452
+  -->
+
+  <!-- Horizontal row dividers -->
+  <line x1="16" y1="162" x2="774" y2="162" stroke="#2FB6D8" stroke-width="0.5" opacity="0.1"/>
+  <line x1="16" y1="220" x2="774" y2="220" stroke="#2FB6D8" stroke-width="0.5" opacity="0.1"/>
+  <line x1="16" y1="278" x2="774" y2="278" stroke="#2FB6D8" stroke-width="0.5" opacity="0.1"/>
+  <line x1="16" y1="336" x2="774" y2="336" stroke="#2FB6D8" stroke-width="0.5" opacity="0.1"/>
+  <line x1="16" y1="394" x2="774" y2="394" stroke="#2FB6D8" stroke-width="0.5" opacity="0.1"/>
+
+  <!-- Alternating row tints -->
+  <rect x="110" y="220" width="664" height="58" fill="#ef4444" opacity="0.02"/>
+  <rect x="110" y="336" width="664" height="58" fill="#2FB6D8" opacity="0.02"/>
+
+  <!-- ── SITE LABELS ── centered vertically in each row -->
+  <text x="62" y="133" text-anchor="middle" dominant-baseline="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#94a3b8">Site A</text>
+  <text x="62" y="191" text-anchor="middle" dominant-baseline="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#94a3b8">Site B</text>
+  <text x="62" y="249" text-anchor="middle" dominant-baseline="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#ef4444">Site C</text>
+  <text x="62" y="307" text-anchor="middle" dominant-baseline="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#94a3b8">Site D</text>
+  <text x="62" y="365" text-anchor="middle" dominant-baseline="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#94a3b8">Site E</text>
+  <text x="62" y="423" text-anchor="middle" dominant-baseline="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#94a3b8">Site F</text>
+
+  <!-- ── SAMPLE EVENTS ── all clipped/placed within x=110–774 -->
+
+  <!-- SITE A row (y 104–162, center 133) -->
+  <!-- Collected block Feb 11–14 -->
+  <rect x="116" y="119" width="82" height="22" rx="4" fill="#22c55e" opacity="0.18" stroke="#22c55e" stroke-width="0.75"/>
+  <text x="157" y="130" text-anchor="middle" dominant-baseline="middle" font-family="system-ui, sans-serif" font-size="8" font-weight="600" fill="#22c55e">WA-2285 · Collected</text>
+  <!-- Reported dot Feb 18 -->
+  <circle cx="347" cy="130" r="11" fill="#22c55e" opacity="0.15" stroke="#22c55e" stroke-width="1"/>
+  <text x="347" y="130" text-anchor="middle" dominant-baseline="middle" font-family="system-ui, sans-serif" font-size="10" fill="#22c55e">✓</text>
+  <!-- Tested block around today -->
+  <rect x="404" y="119" width="80" height="22" rx="4" fill="#2FB6D8" opacity="0.15" stroke="#2FB6D8" stroke-width="0.75"/>
+  <text x="444" y="130" text-anchor="middle" dominant-baseline="middle" font-family="system-ui, sans-serif" font-size="8" font-weight="600" fill="#2FB6D8">WA-2291 · Tested</text>
+  <!-- Due Mar 7 -->
+  <rect x="592" y="119" width="80" height="22" rx="4" fill="#fef9c3" stroke="#f59e0b" stroke-width="0.75"/>
+  <text x="632" y="130" text-anchor="middle" dominant-baseline="middle" font-family="system-ui, sans-serif" font-size="8" font-weight="600" fill="#ca8a04">WA-2288 · Due</text>
+
+  <!-- SITE B row (y 162–220, center 191) -->
+  <rect x="211" y="177" width="82" height="22" rx="4" fill="#22c55e" opacity="0.15" stroke="#22c55e" stroke-width="0.75"/>
+  <text x="252" y="188" text-anchor="middle" dominant-baseline="middle" font-family="system-ui, sans-serif" font-size="8" font-weight="600" fill="#22c55e">WA-2290 · Collected</text>
+  <rect x="497" y="177" width="80" height="22" rx="4" fill="#dbeafe" stroke="#2563eb" stroke-width="0.75"/>
+  <text x="537" y="188" text-anchor="middle" dominant-baseline="middle" font-family="system-ui, sans-serif" font-size="8" font-weight="600" fill="#2563eb">WA-2287 · Due Mar 1</text>
+  <rect x="116" y="177" width="88" height="22" rx="4" fill="#a78bfa" opacity="0.12" stroke="#a78bfa" stroke-width="0.75"/>
+  <text x="160" y="188" text-anchor="middle" dominant-baseline="middle" font-family="system-ui, sans-serif" font-size="8" font-weight="600" fill="#a78bfa">WA-2286 · Reviewed</text>
+
+  <!-- SITE C row (y 220–278, center 249) - OVERDUE -->
+  <!-- Overdue bar spanning Feb 18 → today -->
+  <rect x="306" y="235" width="150" height="22" rx="4" fill="#ef4444" opacity="0.18" stroke="#ef4444" stroke-width="1"/>
+  <text x="381" y="246" text-anchor="middle" dominant-baseline="middle" font-family="system-ui, sans-serif" font-size="8" font-weight="600" fill="#ef4444">WA-2289 · OVERDUE ⚠</text>
+  <!-- Alert circle at today -->
+  <circle cx="442" cy="246" r="11" fill="#ef4444" opacity="0.25" stroke="#ef4444" stroke-width="1"/>
+  <text x="442" y="246" text-anchor="middle" dominant-baseline="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#ef4444">!</text>
+  <!-- Another sample collected -->
+  <rect x="116" y="235" width="80" height="22" rx="4" fill="#2FB6D8" opacity="0.12" stroke="#2FB6D8" stroke-width="0.75"/>
+  <text x="156" y="246" text-anchor="middle" dominant-baseline="middle" font-family="system-ui, sans-serif" font-size="8" font-weight="600" fill="#2FB6D8">WA-2283 · Tested</text>
+  <!-- Future scheduled -->
+  <rect x="688" y="235" width="80" height="22" rx="4" fill="#fef9c3" stroke="#f59e0b" stroke-width="0.75"/>
+  <text x="728" y="246" text-anchor="middle" dominant-baseline="middle" font-family="system-ui, sans-serif" font-size="8" font-weight="600" fill="#ca8a04">WA-2280 · Due</text>
+
+  <!-- SITE D row (y 278–336, center 307) -->
+  <rect x="116" y="293" width="82" height="22" rx="4" fill="#22c55e" opacity="0.15" stroke="#22c55e" stroke-width="0.75"/>
+  <text x="157" y="304" text-anchor="middle" dominant-baseline="middle" font-family="system-ui, sans-serif" font-size="8" font-weight="600" fill="#22c55e">WA-2292 · Collected</text>
+  <rect x="404" y="293" width="90" height="22" rx="4" fill="#a78bfa" opacity="0.12" stroke="#a78bfa" stroke-width="0.75"/>
+  <text x="449" y="304" text-anchor="middle" dominant-baseline="middle" font-family="system-ui, sans-serif" font-size="8" font-weight="600" fill="#a78bfa">WA-2286 · Reviewed</text>
+  <circle cx="347" cy="304" r="11" fill="#22c55e" opacity="0.15" stroke="#22c55e" stroke-width="1"/>
+  <text x="347" y="304" text-anchor="middle" dominant-baseline="middle" font-family="system-ui, sans-serif" font-size="10" fill="#22c55e">✓</text>
+
+  <!-- SITE E row (y 336–394, center 365) -->
+  <rect x="211" y="351" width="82" height="22" rx="4" fill="#2FB6D8" opacity="0.12" stroke="#2FB6D8" stroke-width="0.75"/>
+  <text x="252" y="362" text-anchor="middle" dominant-baseline="middle" font-family="system-ui, sans-serif" font-size="8" font-weight="600" fill="#2FB6D8">WA-2294 · Tested</text>
+  <rect x="592" y="351" width="80" height="22" rx="4" fill="#fef9c3" stroke="#f59e0b" stroke-width="0.75"/>
+  <text x="632" y="362" text-anchor="middle" dominant-baseline="middle" font-family="system-ui, sans-serif" font-size="8" font-weight="600" fill="#ca8a04">WA-2291 · Due Mar 7</text>
+  <rect x="116" y="351" width="88" height="22" rx="4" fill="#22c55e" opacity="0.12" stroke="#22c55e" stroke-width="0.75"/>
+  <text x="160" y="362" text-anchor="middle" dominant-baseline="middle" font-family="system-ui, sans-serif" font-size="8" font-weight="600" fill="#22c55e">WA-2288 · Collected</text>
+
+  <!-- SITE F row (y 394–452, center 423) -->
+  <rect x="116" y="409" width="82" height="22" rx="4" fill="#fef9c3" stroke="#f59e0b" stroke-width="0.75"/>
+  <text x="157" y="420" text-anchor="middle" dominant-baseline="middle" font-family="system-ui, sans-serif" font-size="8" font-weight="600" fill="#ca8a04">WA-2295 · Scheduled</text>
+  <rect x="497" y="409" width="80" height="22" rx="4" fill="#2FB6D8" opacity="0.12" stroke="#2FB6D8" stroke-width="0.75"/>
+  <text x="537" y="420" text-anchor="middle" dominant-baseline="middle" font-family="system-ui, sans-serif" font-size="8" font-weight="600" fill="#2FB6D8">WA-2293 · Tested</text>
+  <circle cx="347" cy="420" r="11" fill="#22c55e" opacity="0.15" stroke="#22c55e" stroke-width="1"/>
+  <text x="347" y="420" text-anchor="middle" dominant-baseline="middle" font-family="system-ui, sans-serif" font-size="10" fill="#22c55e">✓</text>
+
+  <!-- Bottom border of calendar -->
+  <line x1="16" y1="452" x2="774" y2="452" stroke="#2FB6D8" stroke-width="0.5" opacity="0.1"/>
+
+  <!-- Legend -->
+  <rect x="16" y="462" width="768" height="30" rx="6" fill="url(#cardGrad)" stroke="#2FB6D8" stroke-width="0.5" opacity="0.5"/>
+
+  <rect x="32" y="472" width="36" height="10" rx="3" fill="#22c55e" opacity="0.2" stroke="#22c55e" stroke-width="0.75"/>
+  <text x="74" y="477" dominant-baseline="middle" font-family="system-ui, sans-serif" font-size="9" fill="#64748b">Collected / Reported</text>
+
+  <rect x="200" y="472" width="36" height="10" rx="3" fill="#2FB6D8" opacity="0.15" stroke="#2FB6D8" stroke-width="0.75"/>
+  <text x="242" y="477" dominant-baseline="middle" font-family="system-ui, sans-serif" font-size="9" fill="#64748b">Tested / In Progress</text>
+
+  <rect x="368" y="472" width="36" height="10" rx="3" fill="#ef4444" opacity="0.18" stroke="#ef4444" stroke-width="0.75"/>
+  <text x="410" y="477" dominant-baseline="middle" font-family="system-ui, sans-serif" font-size="9" fill="#64748b">Overdue</text>
+
+  <rect x="490" y="472" width="36" height="10" rx="3" fill="#fef9c3" stroke="#f59e0b" stroke-width="0.75"/>
+  <text x="532" y="477" dominant-baseline="middle" font-family="system-ui, sans-serif" font-size="9" fill="#64748b">Upcoming Deadline</text>
+
+  <circle cx="672" cy="477" r="7" fill="#22c55e" opacity="0.15" stroke="#22c55e" stroke-width="0.75"/>
+  <text x="672" y="477" text-anchor="middle" dominant-baseline="middle" font-family="system-ui, sans-serif" font-size="9" fill="#22c55e">✓</text>
+  <text x="686" y="477" dominant-baseline="middle" font-family="system-ui, sans-serif" font-size="9" fill="#64748b">Complete</text>
+</svg>

@@ -1,0 +1,167 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 520" width="760" height="520">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0B1121"/>
+      <stop offset="50%" style="stop-color:#111827"/>
+      <stop offset="100%" style="stop-color:#0F172A"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#2FB6D8" stroke-width="0.15" opacity="0.2"/>
+    </pattern>
+    <linearGradient id="phoneShell" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#243154"/>
+      <stop offset="100%" style="stop-color:#141e33"/>
+    </linearGradient>
+    <filter id="phoneShadow">
+      <feDropShadow dx="0" dy="14" stdDeviation="28" flood-color="#000" flood-opacity="0.75"/>
+    </filter>
+    <clipPath id="phoneClip">
+      <rect x="258" y="18" width="248" height="490" rx="36"/>
+    </clipPath>
+  </defs>
+
+  <rect width="760" height="520" fill="url(#bg)"/>
+  <rect width="760" height="520" fill="url(#grid)"/>
+
+  <!-- Left copy -->
+  <text x="46" y="96" font-family="'Courier New', monospace" font-size="9" fill="#2FB6D8" opacity="0.5" letter-spacing="2">P2P LENDING · MOBILE APP</text>
+  <text x="46" y="126" font-family="Georgia, serif" font-size="22" font-weight="700" fill="white">Loan Lifecycle</text>
+  <text x="46" y="152" font-family="Georgia, serif" font-size="22" font-weight="700" fill="white">&amp; Payments</text>
+  <text x="46" y="178" font-family="Georgia, serif" font-size="22" font-weight="700" fill="#2FB6D8">Engine</text>
+  <line x1="46" y1="196" x2="200" y2="196" stroke="#2FB6D8" stroke-width="1" opacity="0.3"/>
+  <text x="46" y="222" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8">End-to-end origination through</text>
+  <text x="46" y="240" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8">repayment with enforced state</text>
+  <text x="46" y="258" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8">transitions and audit trail.</text>
+
+  <rect x="46" y="280" width="192" height="88" rx="8" fill="#162035" stroke="#2FB6D8" stroke-width="0.5" opacity="0.8"/>
+  <text x="66" y="306" font-family="'Courier New', monospace" font-size="11" font-weight="700" fill="#2FB6D8">$12,220</text>
+  <text x="66" y="320" font-family="system-ui, sans-serif" font-size="9" fill="#64748b">total balance · 12 loans</text>
+  <text x="66" y="344" font-family="'Courier New', monospace" font-size="11" font-weight="700" fill="#22c55e">$1,120</text>
+  <text x="66" y="358" font-family="system-ui, sans-serif" font-size="9" fill="#64748b">interest saved</text>
+
+  <!-- State pills -->
+  <rect x="46" y="386" width="78" height="22" rx="11" fill="#22c55e" opacity="0.12" stroke="#22c55e" stroke-width="0.75"/>
+  <text x="85" y="401" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#22c55e">Origination</text>
+  <rect x="130" y="386" width="56" height="22" rx="11" fill="#22c55e" opacity="0.12" stroke="#22c55e" stroke-width="0.75"/>
+  <text x="158" y="401" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#22c55e">Active</text>
+  <rect x="46" y="414" width="72" height="22" rx="11" fill="#2FB6D8" opacity="0.15" stroke="#2FB6D8" stroke-width="1"/>
+  <text x="82" y="429" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" font-weight="700" fill="#2FB6D8">Repayment</text>
+  <rect x="124" y="414" width="70" height="22" rx="11" fill="#f59e0b" opacity="0.1" stroke="#f59e0b" stroke-width="0.75"/>
+  <text x="159" y="429" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#f59e0b">Exception</text>
+  <rect x="46" y="442" width="54" height="22" rx="11" fill="#475569" opacity="0.08" stroke="#475569" stroke-width="0.5"/>
+  <text x="73" y="457" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#475569">Closed</text>
+
+  <!-- Phone shadow + shell -->
+  <rect x="258" y="18" width="248" height="490" rx="36" fill="#0a0f1e" filter="url(#phoneShadow)"/>
+  <rect x="258" y="18" width="248" height="490" rx="36" fill="url(#phoneShell)"/>
+
+  <!-- Physical buttons -->
+  <rect x="254" y="118" width="5" height="28" rx="2.5" fill="#111d36"/>
+  <rect x="254" y="154" width="5" height="28" rx="2.5" fill="#111d36"/>
+  <rect x="505" y="136" width="5" height="44" rx="2.5" fill="#111d36"/>
+
+  <!-- All app UI clipped inside phone shape -->
+  <g clip-path="url(#phoneClip)">
+    <!-- Screen bg -->
+    <rect x="258" y="18" width="248" height="490" fill="#f4f6fb"/>
+
+    <!-- Status bar -->
+    <rect x="258" y="18" width="248" height="16" fill="#f4f6fb"/>
+    <text x="382" y="30" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#94a3b8">9:41</text>
+    <!-- Dynamic island -->
+    <rect x="336" y="22" width="92" height="11" rx="5.5" fill="#1a2744"/>
+
+    <!-- Top action bar: notification + avatar -->
+    <rect x="258" y="34" width="248" height="38" fill="#f4f6fb"/>
+    <!-- notification bell -->
+    <circle cx="434" cy="55" r="14" fill="white"/>
+    <text x="430" y="59" font-family="system-ui" font-size="14" fill="#374151">🔔</text>
+    <circle cx="442" cy="46" r="4" fill="#ef4444"/>
+    <!-- avatar -->
+    <circle cx="472" cy="55" r="14" fill="#e2e8f0"/>
+    <circle cx="472" cy="55" r="12" fill="#cbd5e1"/>
+    <text x="472" y="59" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#475569">J</text>
+
+    <!-- Total Balance -->
+    <rect x="258" y="72" width="248" height="76" fill="#f4f6fb"/>
+    <text x="382" y="90" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#94a3b8">Total Balance</text>
+    <text x="382" y="118" text-anchor="middle" font-family="Georgia, serif" font-size="28" font-weight="700" fill="#1a1a2e">$12,220</text>
+
+    <!-- Donut ring — 93% paid off -->
+    <circle cx="382" cy="185" r="38" fill="none" stroke="#e2e8f0" stroke-width="10"/>
+    <circle cx="382" cy="185" r="38" fill="none" stroke="#22c55e" stroke-width="10"
+      stroke-dasharray="222 239" stroke-dashoffset="59.8" stroke-linecap="round"
+      transform="rotate(-90 382 185)"/>
+    <text x="382" y="181" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#1a1a2e">93%</text>
+    <text x="382" y="196" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#94a3b8">Paid off</text>
+
+    <!-- Two stat cards -->
+    <rect x="264" y="234" width="108" height="58" rx="8" fill="white" stroke="#ede9fe" stroke-width="1"/>
+    <text x="280" y="252" font-family="system-ui, sans-serif" font-size="8" fill="#94a3b8">💰  Total Loans</text>
+    <text x="280" y="270" font-family="Georgia, serif" font-size="20" font-weight="700" fill="#1a1a2e">12</text>
+    <text x="280" y="284" font-family="system-ui, sans-serif" font-size="8" fill="#4338ca">Loans →</text>
+
+    <rect x="378" y="234" width="120" height="58" rx="8" fill="white" stroke="#ccfbf1" stroke-width="1"/>
+    <text x="394" y="252" font-family="system-ui, sans-serif" font-size="8" fill="#94a3b8">📋  Applications</text>
+    <text x="394" y="270" font-family="Georgia, serif" font-size="20" font-weight="700" fill="#1a1a2e">3</text>
+    <text x="394" y="284" font-family="system-ui, sans-serif" font-size="8" fill="#4338ca">Applications →</text>
+
+    <!-- + FAB -->
+    <circle cx="492" cy="238" r="14" fill="#3730a3"/>
+    <text x="492" y="243" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" font-weight="300" fill="white">+</text>
+
+    <!-- Next Payment card -->
+    <rect x="264" y="300" width="234" height="74" rx="8" fill="#fffbeb"/>
+    <text x="282" y="318" font-family="system-ui, sans-serif" font-size="9" fill="#92400e">💳  Next Payment</text>
+    <text x="282" y="340" font-family="Georgia, serif" font-size="22" font-weight="700" fill="#1a1a2e">$350</text>
+    <text x="468" y="340" text-anchor="end" font-family="system-ui, sans-serif" font-size="9" fill="#94a3b8">📅  4/21/2022</text>
+    <!-- Pay button -->
+    <rect x="282" y="348" width="198" height="18" rx="9" fill="#3730a3"/>
+    <text x="381" y="361" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="white">Make a payment</text>
+
+    <!-- Interest saved card -->
+    <rect x="264" y="382" width="234" height="46" rx="8" fill="#f0fdf4"/>
+    <text x="318" y="399" font-family="system-ui, sans-serif" font-size="9" fill="#94a3b8">Interest Saved (Est.)</text>
+    <text x="318" y="418" font-family="Georgia, serif" font-size="17" font-weight="700" fill="#1a1a2e">$1,120</text>
+    <text x="468" y="418" text-anchor="end" font-family="system-ui, sans-serif" font-size="8" fill="#4338ca">How it's calculated</text>
+
+    <!-- Credit score card -->
+    <rect x="264" y="436" width="234" height="46" rx="8" fill="white" stroke="#f1f5f9" stroke-width="1"/>
+    <text x="282" y="454" font-family="system-ui, sans-serif" font-size="9" fill="#94a3b8">Credit Score</text>
+    <text x="282" y="473" font-family="Georgia, serif" font-size="17" font-weight="700" fill="#1a1a2e">769</text>
+    <text x="310" y="471" font-family="system-ui, sans-serif" font-size="11" fill="#22c55e">↑</text>
+    <!-- mini score gauge -->
+    <path d="M 390 472 A 30 30 0 0 1 450 472" fill="none" stroke="#e2e8f0" stroke-width="5" stroke-linecap="round"/>
+    <path d="M 390 472 A 30 30 0 0 1 442 448" fill="none" stroke="#22c55e" stroke-width="5" stroke-linecap="round"/>
+    <text x="468" y="475" text-anchor="end" font-family="system-ui, sans-serif" font-size="8" fill="#4338ca">View details</text>
+
+  </g>
+
+  <!-- Bezel ring on top -->
+  <rect x="258" y="18" width="248" height="490" rx="36" fill="none" stroke="#2a3f6a" stroke-width="3"/>
+  <rect x="260" y="20" width="244" height="486" rx="34" fill="none" stroke="white" stroke-width="0.5" opacity="0.06"/>
+
+  <!-- Home pill -->
+  <rect x="330" y="490" width="104" height="5" rx="2.5" fill="#2a3f6a"/>
+
+  <!-- Right callout annotations -->
+  <line x1="508" y1="185" x2="548" y2="185" stroke="#22c55e" stroke-width="1" stroke-dasharray="3,2" opacity="0.5"/>
+  <rect x="548" y="173" width="160" height="28" rx="5" fill="#162035" stroke="#22c55e" stroke-width="0.5"/>
+  <text x="562" y="185" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#22c55e">93% Paid Off Donut</text>
+  <text x="562" y="196" font-family="system-ui, sans-serif" font-size="8" fill="#64748b">$12,220 balance · 12 loans</text>
+
+  <line x1="508" y1="337" x2="548" y2="337" stroke="#f59e0b" stroke-width="1" stroke-dasharray="3,2" opacity="0.5"/>
+  <rect x="548" y="325" width="160" height="28" rx="5" fill="#162035" stroke="#f59e0b" stroke-width="0.5"/>
+  <text x="562" y="337" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#f59e0b">Next Payment Card</text>
+  <text x="562" y="348" font-family="system-ui, sans-serif" font-size="8" fill="#64748b">$350 due · one-tap payment</text>
+
+  <line x1="508" y1="405" x2="548" y2="405" stroke="#2FB6D8" stroke-width="1" stroke-dasharray="3,2" opacity="0.5"/>
+  <rect x="548" y="393" width="160" height="28" rx="5" fill="#162035" stroke="#2FB6D8" stroke-width="0.5"/>
+  <text x="562" y="405" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#2FB6D8">Interest Savings Tracker</text>
+  <text x="562" y="416" font-family="system-ui, sans-serif" font-size="8" fill="#64748b">$1,120 saved vs. standard rate</text>
+
+  <line x1="508" y1="459" x2="548" y2="459" stroke="#a78bfa" stroke-width="1" stroke-dasharray="3,2" opacity="0.5"/>
+  <rect x="548" y="447" width="160" height="28" rx="5" fill="#162035" stroke="#a78bfa" stroke-width="0.5"/>
+  <text x="562" y="459" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#a78bfa">Credit Score Widget</text>
+  <text x="562" y="470" font-family="system-ui, sans-serif" font-size="8" fill="#64748b">769 ↑ · reporting integrated</text>
+</svg>

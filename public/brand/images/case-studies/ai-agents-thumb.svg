@@ -1,0 +1,186 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0B1121"/>
+      <stop offset="100%" style="stop-color:#0F172A"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#162035"/>
+      <stop offset="100%" style="stop-color:#0f1a2e"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#2FB6D8" stroke-width="0.1" opacity="0.15"/>
+    </pattern>
+    <clipPath id="c1"><rect x="24" y="136" width="234" height="340" rx="10"/></clipPath>
+    <clipPath id="c2"><rect x="282" y="136" width="234" height="340" rx="10"/></clipPath>
+    <clipPath id="c3"><rect x="540" y="136" width="236" height="340" rx="10"/></clipPath>
+    <clipPath id="pipe"><rect x="24" y="44" width="752" height="88" rx="10"/></clipPath>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#bg)"/>
+  <rect width="800" height="500" fill="url(#grid)"/>
+
+  <text x="400" y="32" text-anchor="middle" font-family="'Courier New', monospace" font-size="10" fill="#2FB6D8" opacity="0.5" letter-spacing="3">BUBS · MULTI-AGENT PRODUCTION FRAMEWORK</text>
+
+  <!-- ── BOS PIPELINE ── -->
+  <rect x="24" y="44" width="752" height="88" rx="10" fill="#071520"/>
+  <rect x="24" y="44" width="752" height="88" rx="10" fill="none" stroke="#1e3a5f" stroke-width="1"/>
+
+  <g clip-path="url(#pipe)">
+    <line x1="100" y1="76" x2="700" y2="76" stroke="#1e3a5f" stroke-width="2"/>
+    <!-- Progress: BUILD done, OPERATE active, STABILIZE future -->
+    <line x1="100" y1="76" x2="300" y2="76" stroke="#f59e0b" stroke-width="2" opacity="0.5"/>
+
+    <!-- BUILD: done -->
+    <circle cx="100" cy="76" r="18" fill="#1a1400" stroke="#f59e0b" stroke-width="2"/>
+    <text x="100" y="81" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" font-weight="700" fill="#f59e0b">BUILD</text>
+    <text x="100" y="106" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#fbbf24" opacity="0.8">Observability</text>
+    <text x="100" y="116" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#fbbf24" opacity="0.8">Translation · Gov</text>
+
+    <!-- OPERATE: active -->
+    <circle cx="400" cy="76" r="18" fill="#0c2233" stroke="#2FB6D8" stroke-width="2.5"/>
+    <circle cx="400" cy="76" r="7" fill="#2FB6D8"/>
+    <text x="400" y="106" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" font-weight="700" fill="#7dd3fc">OPERATE</text>
+    <text x="400" y="116" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#7dd3fc" opacity="0.7">6-Layer Loop</text>
+
+    <!-- STABILIZE: future -->
+    <circle cx="700" cy="76" r="18" fill="#111827" stroke="#374151" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <text x="700" y="81" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#6b7280">STAB</text>
+    <text x="700" y="106" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#4b5563">Stabilize</text>
+    <text x="700" y="116" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#4b5563">Production-ready</text>
+  </g>
+
+  <!-- ── CARD 1: Metrics ── -->
+  <rect x="24" y="136" width="234" height="340" rx="10" fill="url(#card)" stroke="#f59e0b" stroke-width="0.75"/>
+  <rect x="24" y="136" width="234" height="38" rx="10" fill="#1a1400"/>
+  <rect x="24" y="156" width="234" height="18" fill="#1a1400"/>
+  <text x="42" y="160" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#fbbf24">System Output</text>
+
+  <g clip-path="url(#c1)">
+    <!-- Big metric: dev time -->
+    <rect x="36" y="182" width="210" height="56" rx="8" fill="#f59e0b" opacity="0.08" stroke="#f59e0b" stroke-width="0.75"/>
+    <text x="141" y="204" text-anchor="middle" font-family="'Courier New', monospace" font-size="28" font-weight="700" fill="white">&lt;24hrs</text>
+    <text x="141" y="224" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#94a3b8">Development Time</text>
+
+    <!-- Stat grid -->
+    <rect x="36" y="252" width="96" height="60" rx="6" fill="#f59e0b" opacity="0.06"/>
+    <text x="84" y="278" text-anchor="middle" font-family="'Courier New', monospace" font-size="26" font-weight="700" fill="#fbbf24">259</text>
+    <text x="84" y="296" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#64748b">Issues Identified</text>
+
+    <rect x="150" y="252" width="96" height="60" rx="6" fill="#f59e0b" opacity="0.06"/>
+    <text x="198" y="278" text-anchor="middle" font-family="'Courier New', monospace" font-size="26" font-weight="700" fill="#fbbf24">747</text>
+    <text x="198" y="296" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#64748b">Auto Scripts</text>
+
+    <rect x="36" y="326" width="96" height="60" rx="6" fill="#f59e0b" opacity="0.06"/>
+    <text x="84" y="352" text-anchor="middle" font-family="'Courier New', monospace" font-size="26" font-weight="700" fill="#fbbf24">12</text>
+    <text x="84" y="370" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#64748b">Governance Rules</text>
+
+    <rect x="150" y="326" width="96" height="60" rx="6" fill="#2FB6D8" opacity="0.06"/>
+    <text x="198" y="352" text-anchor="middle" font-family="'Courier New', monospace" font-size="26" font-weight="700" fill="#2FB6D8">58</text>
+    <text x="198" y="370" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#64748b">Structural Issues</text>
+
+    <!-- Self-improving note -->
+    <line x1="36" y1="402" x2="246" y2="402" stroke="#1e3a5f" stroke-width="0.5"/>
+    <text x="36" y="420" font-family="'Courier New', monospace" font-size="8" fill="#475569" letter-spacing="1">RECIPE LEARNING</text>
+    <text x="36" y="436" font-family="system-ui, sans-serif" font-size="9" fill="#94a3b8">1st workflow: 3 cURL captures</text>
+    <text x="36" y="450" font-family="system-ui, sans-serif" font-size="9" fill="#94a3b8">5th workflow: 1 cURL capture</text>
+    <text x="36" y="464" font-family="system-ui, sans-serif" font-size="9" fill="#22c55e">10th workflow: 0 cURL captures</text>
+  </g>
+
+  <!-- ── CARD 2: Agent Lanes ── -->
+  <rect x="282" y="136" width="234" height="340" rx="10" fill="url(#card)" stroke="#2FB6D8" stroke-width="0.75"/>
+  <rect x="282" y="136" width="234" height="38" rx="10" fill="#071520"/>
+  <rect x="282" y="156" width="234" height="18" fill="#071520"/>
+  <text x="300" y="160" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#7dd3fc">4 Agent Lanes</text>
+
+  <g clip-path="url(#c2)">
+    <!-- Central hub visual -->
+    <circle cx="399" cy="230" r="22" fill="#0c2233" stroke="#2FB6D8" stroke-width="1.5"/>
+    <circle cx="399" cy="230" r="9" fill="#1a3a5c"/>
+    <text x="399" y="233" text-anchor="middle" font-family="'Courier New', monospace" font-size="6" font-weight="700" fill="#7dd3fc">BUBS</text>
+    <circle cx="399" cy="230" r="30" fill="none" stroke="#2FB6D8" stroke-width="0.6" opacity="0.3"/>
+
+    <!-- Discovery agent: top -->
+    <line x1="399" y1="208" x2="399" y2="188" stroke="#f59e0b" stroke-width="1" opacity="0.6"/>
+    <rect x="360" y="172" width="78" height="20" rx="4" fill="#1a1400" stroke="#f59e0b" stroke-width="1"/>
+    <text x="399" y="185" text-anchor="middle" font-family="'Courier New', monospace" font-size="8" fill="#fbbf24">DISCOVERY</text>
+
+    <!-- Planner: right — wider box -->
+    <line x1="421" y1="230" x2="444" y2="230" stroke="#94a3b8" stroke-width="1" opacity="0.6"/>
+    <rect x="440" y="220" width="72" height="20" rx="4" fill="#1e2a3a" stroke="#94a3b8" stroke-width="1"/>
+    <text x="476" y="233" text-anchor="middle" font-family="'Courier New', monospace" font-size="8" fill="#94a3b8">PLANNER</text>
+
+    <!-- Writer: bottom -->
+    <line x1="399" y1="252" x2="399" y2="272" stroke="#22c55e" stroke-width="1" opacity="0.6"/>
+    <rect x="360" y="268" width="78" height="20" rx="4" fill="#071a0d" stroke="#22c55e" stroke-width="1"/>
+    <text x="399" y="281" text-anchor="middle" font-family="'Courier New', monospace" font-size="8" fill="#22c55e">WRITER</text>
+
+    <!-- Verifier: left — wider box, pushed left enough to fit -->
+    <line x1="377" y1="230" x2="354" y2="230" stroke="#a78bfa" stroke-width="1" opacity="0.6"/>
+    <rect x="288" y="220" width="70" height="20" rx="4" fill="#150f28" stroke="#a78bfa" stroke-width="1"/>
+    <text x="323" y="233" text-anchor="middle" font-family="'Courier New', monospace" font-size="8" fill="#a78bfa">VERIFIER</text>
+
+    <!-- Role badges -->
+    <line x1="300" y1="318" x2="490" y2="318" stroke="#1e3a5f" stroke-width="0.5"/>
+    <text x="300" y="334" font-family="'Courier New', monospace" font-size="8" fill="#475569" letter-spacing="1">ACCESS CONTROL</text>
+
+    <rect x="300" y="342" width="88" height="18" rx="4" fill="#f59e0b" opacity="0.1" stroke="#f59e0b" stroke-width="0.75"/>
+    <text x="344" y="354" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#fbbf24">read-only agents</text>
+    <rect x="398" y="342" width="92" height="18" rx="4" fill="#22c55e" opacity="0.1" stroke="#22c55e" stroke-width="0.75"/>
+    <text x="444" y="354" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#22c55e">write-enabled agents</text>
+
+    <!-- 6-layer process -->
+    <text x="300" y="384" font-family="'Courier New', monospace" font-size="8" fill="#475569" letter-spacing="1">6-LAYER OPERATE LOOP</text>
+    <text x="300" y="400" font-family="system-ui, sans-serif" font-size="9" fill="#94a3b8">Inspect → Decompose → Propose</text>
+    <text x="300" y="416" font-family="system-ui, sans-serif" font-size="9" fill="#94a3b8">→ Mutate → Verify → Trace</text>
+
+    <text x="300" y="440" font-family="system-ui, sans-serif" font-size="9" fill="#64748b">Proposal-first: no reactive mutation</text>
+    <text x="300" y="456" font-family="system-ui, sans-serif" font-size="9" fill="#64748b">Every change verified before close</text>
+    <text x="300" y="468" font-family="system-ui, sans-serif" font-size="9" fill="#22c55e">Rollback on every destructive op</text>
+  </g>
+
+  <!-- ── CARD 3: Governance ── -->
+  <rect x="540" y="136" width="236" height="340" rx="10" fill="url(#card)" stroke="#a78bfa" stroke-width="0.75"/>
+  <rect x="540" y="136" width="236" height="38" rx="10" fill="#150f28"/>
+  <rect x="540" y="156" width="236" height="18" fill="#150f28"/>
+  <text x="558" y="160" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#c4b5fd">Governance Layer</text>
+
+  <g clip-path="url(#c3)">
+    <!-- Global files -->
+    <text x="558" y="188" font-family="'Courier New', monospace" font-size="8" fill="#475569" letter-spacing="1">GLOBAL FILES</text>
+    <rect x="558" y="194" width="204" height="22" rx="4" fill="#a78bfa" opacity="0.08" stroke="#a78bfa" stroke-width="0.75"/>
+    <text x="566" y="209" font-family="'Courier New', monospace" font-size="9" fill="#c4b5fd">SYSTEM.md</text>
+    <text x="750" y="209" text-anchor="end" font-family="system-ui, sans-serif" font-size="8" fill="#64748b">agent safeguards</text>
+    <rect x="558" y="220" width="204" height="22" rx="4" fill="#a78bfa" opacity="0.08" stroke="#a78bfa" stroke-width="0.75"/>
+    <text x="566" y="235" font-family="'Courier New', monospace" font-size="9" fill="#c4b5fd">WIRE_FORMAT.md</text>
+    <text x="750" y="235" text-anchor="end" font-family="system-ui, sans-serif" font-size="8" fill="#64748b">API translation</text>
+
+    <!-- Project files -->
+    <text x="558" y="262" font-family="'Courier New', monospace" font-size="8" fill="#475569" letter-spacing="1">PROJECT FILES</text>
+    <rect x="558" y="268" width="204" height="22" rx="4" fill="#2FB6D8" opacity="0.06" stroke="#2FB6D8" stroke-width="0.75"/>
+    <text x="566" y="283" font-family="'Courier New', monospace" font-size="9" fill="#7dd3fc">CONTEXT.md</text>
+    <text x="750" y="283" text-anchor="end" font-family="system-ui, sans-serif" font-size="8" fill="#64748b">app architecture</text>
+    <rect x="558" y="294" width="204" height="22" rx="4" fill="#2FB6D8" opacity="0.06" stroke="#2FB6D8" stroke-width="0.75"/>
+    <text x="566" y="309" font-family="'Courier New', monospace" font-size="9" fill="#7dd3fc">DECISIONS.md</text>
+    <text x="750" y="309" text-anchor="end" font-family="system-ui, sans-serif" font-size="8" fill="#64748b">what needs fixing</text>
+    <rect x="558" y="320" width="204" height="22" rx="4" fill="#2FB6D8" opacity="0.06" stroke="#2FB6D8" stroke-width="0.75"/>
+    <text x="566" y="335" font-family="'Courier New', monospace" font-size="9" fill="#7dd3fc">PROTOCOL.md</text>
+    <text x="750" y="335" text-anchor="end" font-family="system-ui, sans-serif" font-size="8" fill="#64748b">safety rules</text>
+
+    <!-- Auto-enforcement -->
+    <line x1="558" y1="356" x2="762" y2="356" stroke="#1e3a5f" stroke-width="0.5"/>
+    <text x="558" y="372" font-family="'Courier New', monospace" font-size="8" fill="#475569" letter-spacing="1">AUTO-ENFORCED</text>
+
+    <!-- Color coded workflow dots -->
+    <circle cx="566" cy="390" r="5" fill="#f59e0b"/>
+    <text x="578" y="394" font-family="system-ui, sans-serif" font-size="9" fill="#94a3b8">monitoring workflows</text>
+    <circle cx="566" cy="408" r="5" fill="#a78bfa"/>
+    <text x="578" y="412" font-family="system-ui, sans-serif" font-size="9" fill="#94a3b8">automation workflows</text>
+    <circle cx="566" cy="426" r="5" fill="#22c55e"/>
+    <text x="578" y="430" font-family="system-ui, sans-serif" font-size="9" fill="#94a3b8">data write workflows</text>
+    <circle cx="566" cy="444" r="5" fill="#f97316"/>
+    <text x="578" y="448" font-family="system-ui, sans-serif" font-size="9" fill="#94a3b8">admin workflows</text>
+
+    <text x="558" y="468" font-family="system-ui, sans-serif" font-size="9" fill="#64748b">Notes field required on every mutation</text>
+  </g>
+</svg>

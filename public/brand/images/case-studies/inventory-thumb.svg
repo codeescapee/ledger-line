@@ -1,0 +1,203 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0B1121"/>
+      <stop offset="50%" style="stop-color:#111827"/>
+      <stop offset="100%" style="stop-color:#0F172A"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#162035"/>
+      <stop offset="100%" style="stop-color:#0f1a2e"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#2FB6D8" stroke-width="0.15" opacity="0.2"/>
+    </pattern>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#bg)"/>
+  <rect width="800" height="500" fill="url(#grid)"/>
+
+  <!-- State pipeline header -->
+  <text x="400" y="44" text-anchor="middle" font-family="'Courier New', monospace" font-size="10" fill="#2FB6D8" opacity="0.45" letter-spacing="3">MULTI-TENANT · ROLE-BASED · STATE-ENFORCED</text>
+
+  <!-- State flow pills at top -->
+  <!-- Available -->
+  <rect x="80" y="58" width="90" height="26" rx="13" fill="#22c55e" opacity="0.15" stroke="#22c55e" stroke-width="0.75"/>
+  <circle cx="100" cy="71" r="4" fill="#22c55e"/>
+  <text x="142" y="75" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#22c55e" font-weight="600">Available</text>
+  <line x1="172" y1="71" x2="192" y2="71" stroke="#2FB6D8" stroke-width="1" opacity="0.4"/>
+  <polyline points="187,67 193,71 187,75" fill="none" stroke="#2FB6D8" stroke-width="1" opacity="0.4"/>
+
+  <!-- Reserved -->
+  <rect x="196" y="58" width="90" height="26" rx="13" fill="#f59e0b" opacity="0.15" stroke="#f59e0b" stroke-width="0.75"/>
+  <circle cx="216" cy="71" r="4" fill="#f59e0b"/>
+  <text x="258" y="75" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#f59e0b" font-weight="600">Reserved</text>
+  <line x1="288" y1="71" x2="308" y2="71" stroke="#2FB6D8" stroke-width="1" opacity="0.4"/>
+  <polyline points="303,67 309,71 303,75" fill="none" stroke="#2FB6D8" stroke-width="1" opacity="0.4"/>
+
+  <!-- Lent -->
+  <rect x="312" y="58" width="90" height="26" rx="13" fill="#2FB6D8" opacity="0.15" stroke="#2FB6D8" stroke-width="0.75"/>
+  <circle cx="332" cy="71" r="4" fill="#2FB6D8"/>
+  <text x="374" y="75" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#2FB6D8" font-weight="600">Lent</text>
+  <line x1="404" y1="71" x2="424" y2="71" stroke="#2FB6D8" stroke-width="1" opacity="0.4"/>
+  <polyline points="419,67 425,71 419,75" fill="none" stroke="#2FB6D8" stroke-width="1" opacity="0.4"/>
+
+  <!-- Returned -->
+  <rect x="428" y="58" width="90" height="26" rx="13" fill="#a78bfa" opacity="0.15" stroke="#a78bfa" stroke-width="0.75"/>
+  <circle cx="448" cy="71" r="4" fill="#a78bfa"/>
+  <text x="490" y="75" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#a78bfa" font-weight="600">Returned</text>
+  <line x1="520" y1="71" x2="540" y2="71" stroke="#2FB6D8" stroke-width="1" opacity="0.4"/>
+  <polyline points="535,67 541,71 535,75" fill="none" stroke="#2FB6D8" stroke-width="1" opacity="0.4"/>
+
+  <!-- Overdue -->
+  <rect x="544" y="58" width="90" height="26" rx="13" fill="#ef4444" opacity="0.15" stroke="#ef4444" stroke-width="0.75"/>
+  <circle cx="564" cy="71" r="4" fill="#ef4444"/>
+  <text x="606" y="75" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#ef4444" font-weight="600">Overdue</text>
+
+  <!-- ── THREE TENANT LANES ── -->
+
+  <!-- TENANT 1 -->
+  <rect x="32" y="104" width="228" height="340" rx="10" fill="url(#cardGrad)" stroke="#2FB6D8" stroke-width="1"/>
+  <!-- Tenant tab -->
+  <rect x="32" y="104" width="228" height="32" rx="10" fill="#2FB6D8" opacity="0.12"/>
+  <rect x="32" y="116" width="228" height="20" fill="#2FB6D8" opacity="0.12"/>
+  <circle cx="52" cy="120" r="6" fill="#2FB6D8" opacity="0.3"/>
+  <text x="64" y="124" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#2FB6D8">Skyline Party Rentals</text>
+  <text x="222" y="124" text-anchor="end" font-family="'Courier New', monospace" font-size="9" fill="#2FB6D8" opacity="0.5">ADMIN</text>
+
+  <!-- Orders rows -->
+  <!-- Row header -->
+  <text x="48" y="158" font-family="system-ui, sans-serif" font-size="9" fill="#475569" letter-spacing="1">CUSTOMER</text>
+  <text x="180" y="158" font-family="system-ui, sans-serif" font-size="9" fill="#475569" letter-spacing="1">STATUS</text>
+  <line x1="32" y1="164" x2="260" y2="164" stroke="#2FB6D8" stroke-width="0.5" opacity="0.1"/>
+
+  <!-- Row 1 -->
+  <text x="48" y="182" font-family="system-ui, sans-serif" font-size="10" fill="#e2e8f0">Sarah K.</text>
+  <text x="105" y="182" font-family="'Courier New', monospace" font-size="9" fill="#64748b">28 items</text>
+  <rect x="168" y="172" width="60" height="16" rx="8" fill="#2FB6D8" opacity="0.15"/>
+  <text x="198" y="183" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#2FB6D8" font-weight="600">Lent</text>
+
+  <line x1="40" y1="194" x2="252" y2="194" stroke="#2FB6D8" stroke-width="0.5" opacity="0.06"/>
+
+  <!-- Row 2 -->
+  <text x="48" y="212" font-family="system-ui, sans-serif" font-size="10" fill="#e2e8f0">Mike R.</text>
+  <text x="105" y="212" font-family="'Courier New', monospace" font-size="9" fill="#64748b">16 items</text>
+  <rect x="168" y="202" width="60" height="16" rx="8" fill="#f59e0b" opacity="0.15"/>
+  <text x="198" y="213" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#f59e0b" font-weight="600">Reserved</text>
+
+  <line x1="40" y1="224" x2="252" y2="224" stroke="#2FB6D8" stroke-width="0.5" opacity="0.06"/>
+
+  <!-- Row 3 -->
+  <text x="48" y="242" font-family="system-ui, sans-serif" font-size="10" fill="#e2e8f0">Dana F.</text>
+  <text x="105" y="242" font-family="'Courier New', monospace" font-size="9" fill="#64748b">12 items</text>
+  <rect x="168" y="232" width="60" height="16" rx="8" fill="#ef4444" opacity="0.15"/>
+  <text x="198" y="243" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#ef4444" font-weight="600">Overdue</text>
+
+  <line x1="40" y1="254" x2="252" y2="254" stroke="#2FB6D8" stroke-width="0.5" opacity="0.06"/>
+
+  <!-- Row 4 -->
+  <text x="48" y="272" font-family="system-ui, sans-serif" font-size="10" fill="#e2e8f0">Tom B.</text>
+  <text x="105" y="272" font-family="'Courier New', monospace" font-size="9" fill="#64748b">24 items</text>
+  <rect x="168" y="262" width="60" height="16" rx="8" fill="#a78bfa" opacity="0.15"/>
+  <text x="198" y="273" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#a78bfa" font-weight="600">Returned</text>
+
+  <line x1="40" y1="284" x2="252" y2="284" stroke="#2FB6D8" stroke-width="0.5" opacity="0.06"/>
+
+  <!-- Row 5 -->
+  <text x="48" y="302" font-family="system-ui, sans-serif" font-size="10" fill="#e2e8f0">Lisa M.</text>
+  <text x="105" y="302" font-family="'Courier New', monospace" font-size="9" fill="#64748b">20 items</text>
+  <rect x="168" y="292" width="60" height="16" rx="8" fill="#22c55e" opacity="0.15"/>
+  <text x="198" y="303" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#22c55e" font-weight="600">Available</text>
+
+  <!-- Role badge -->
+  <rect x="40" y="392" width="180" height="36" rx="6" fill="#2FB6D8" opacity="0.2" stroke="#2FB6D8" stroke-width="0.5"/>
+  <text x="52" y="407" font-family="'Courier New', monospace" font-size="8" fill="#475569">ROLE ENFORCED</text>
+  <text x="52" y="420" font-family="system-ui, sans-serif" font-size="9" fill="#2FB6D8">Admin · Full access</text>
+
+  <!-- TENANT 2 -->
+  <rect x="288" y="104" width="228" height="340" rx="10" fill="url(#cardGrad)" stroke="#2FB6D8" stroke-width="1" opacity="0.7"/>
+  <rect x="288" y="104" width="228" height="32" rx="10" fill="#a78bfa" opacity="0.08"/>
+  <rect x="288" y="116" width="228" height="20" fill="#a78bfa" opacity="0.08"/>
+  <circle cx="308" cy="120" r="6" fill="#a78bfa" opacity="0.3"/>
+  <text x="320" y="124" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#a78bfa">Celebration Co.</text>
+  <text x="478" y="124" text-anchor="end" font-family="'Courier New', monospace" font-size="9" fill="#a78bfa" opacity="0.5">MANAGER</text>
+
+  <text x="304" y="158" font-family="system-ui, sans-serif" font-size="9" fill="#475569" letter-spacing="1">CUSTOMER</text>
+  <text x="436" y="158" font-family="system-ui, sans-serif" font-size="9" fill="#475569" letter-spacing="1">STATUS</text>
+  <line x1="288" y1="164" x2="516" y2="164" stroke="#2FB6D8" stroke-width="0.5" opacity="0.1"/>
+
+  <text x="304" y="182" font-family="system-ui, sans-serif" font-size="10" fill="#e2e8f0">Anna P.</text>
+  <text x="361" y="182" font-family="'Courier New', monospace" font-size="9" fill="#64748b">20 items</text>
+  <rect x="424" y="172" width="60" height="16" rx="8" fill="#2FB6D8" opacity="0.15"/>
+  <text x="454" y="183" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#2FB6D8" font-weight="600">Lent</text>
+  <line x1="296" y1="194" x2="508" y2="194" stroke="#2FB6D8" stroke-width="0.5" opacity="0.06"/>
+
+  <text x="304" y="212" font-family="system-ui, sans-serif" font-size="10" fill="#e2e8f0">Chris L.</text>
+  <text x="361" y="212" font-family="'Courier New', monospace" font-size="9" fill="#64748b">8 items</text>
+  <rect x="424" y="202" width="60" height="16" rx="8" fill="#22c55e" opacity="0.15"/>
+  <text x="454" y="213" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#22c55e" font-weight="600">Available</text>
+  <line x1="296" y1="224" x2="508" y2="224" stroke="#2FB6D8" stroke-width="0.5" opacity="0.06"/>
+
+  <text x="304" y="242" font-family="system-ui, sans-serif" font-size="10" fill="#e2e8f0">Beth S.</text>
+  <text x="361" y="242" font-family="'Courier New', monospace" font-size="9" fill="#64748b">16 items</text>
+  <rect x="424" y="232" width="60" height="16" rx="8" fill="#f59e0b" opacity="0.15"/>
+  <text x="454" y="243" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#f59e0b" font-weight="600">Reserved</text>
+  <line x1="296" y1="254" x2="508" y2="254" stroke="#2FB6D8" stroke-width="0.5" opacity="0.06"/>
+
+  <text x="304" y="272" font-family="system-ui, sans-serif" font-size="10" fill="#e2e8f0">Joe T.</text>
+  <text x="361" y="272" font-family="'Courier New', monospace" font-size="9" fill="#64748b">28 items</text>
+  <rect x="424" y="262" width="60" height="16" rx="8" fill="#a78bfa" opacity="0.15"/>
+  <text x="454" y="273" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#a78bfa" font-weight="600">Returned</text>
+
+  <rect x="296" y="392" width="180" height="36" rx="6" fill="#a78bfa" opacity="0.06" stroke="#a78bfa" stroke-width="0.5"/>
+  <text x="308" y="407" font-family="'Courier New', monospace" font-size="8" fill="#475569">ROLE ENFORCED</text>
+  <text x="308" y="420" font-family="system-ui, sans-serif" font-size="9" fill="#a78bfa">Manager · Scoped access</text>
+
+  <!-- TENANT 3 -->
+  <rect x="544" y="104" width="228" height="340" rx="10" fill="url(#cardGrad)" stroke="#2FB6D8" stroke-width="1" opacity="0.5"/>
+  <rect x="544" y="104" width="228" height="32" rx="10" fill="#22c55e" opacity="0.06"/>
+  <rect x="544" y="116" width="228" height="20" fill="#22c55e" opacity="0.06"/>
+  <circle cx="564" cy="120" r="6" fill="#22c55e" opacity="0.3"/>
+  <text x="576" y="124" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#64748b">Grand Event Supply</text>
+  <text x="734" y="124" text-anchor="end" font-family="'Courier New', monospace" font-size="9" fill="#64748b" opacity="0.5">STAFF</text>
+
+  <text x="560" y="158" font-family="system-ui, sans-serif" font-size="9" fill="#2d3748" letter-spacing="1">CUSTOMER</text>
+  <text x="692" y="158" font-family="system-ui, sans-serif" font-size="9" fill="#2d3748" letter-spacing="1">STATUS</text>
+  <line x1="544" y1="164" x2="772" y2="164" stroke="#2FB6D8" stroke-width="0.5" opacity="0.08"/>
+
+  <text x="560" y="182" font-family="system-ui, sans-serif" font-size="10" fill="#64748b">Rachel W.</text>
+  <text x="620" y="182" font-family="'Courier New', monospace" font-size="9" fill="#374151">12 items</text>
+  <rect x="680" y="172" width="60" height="16" rx="8" fill="#2FB6D8" opacity="0.08"/>
+  <text x="710" y="183" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#475569">Lent</text>
+  <line x1="552" y1="194" x2="764" y2="194" stroke="#2FB6D8" stroke-width="0.5" opacity="0.04"/>
+
+  <text x="560" y="212" font-family="system-ui, sans-serif" font-size="10" fill="#64748b">Mark D.</text>
+  <text x="620" y="212" font-family="'Courier New', monospace" font-size="9" fill="#374151">20 items</text>
+  <rect x="680" y="202" width="60" height="16" rx="8" fill="#22c55e" opacity="0.08"/>
+  <text x="710" y="213" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#475569">Available</text>
+
+  <!-- Isolated / locked indicator -->
+  <rect x="552" y="392" width="180" height="36" rx="6" fill="#ef4444" opacity="0.15" stroke="#ef4444" stroke-width="0.5"/>
+  <text x="564" y="407" font-family="'Courier New', monospace" font-size="8" fill="#475569">ROLE ENFORCED</text>
+  <text x="564" y="420" font-family="system-ui, sans-serif" font-size="9" fill="#64748b">Staff · Read only</text>
+
+  <!-- Isolation dividers between tenants with lock icons -->
+  <line x1="270" y1="104" x2="270" y2="444" stroke="#2FB6D8" stroke-width="0.5" opacity="0.08" stroke-dasharray="4,4"/>
+  <line x1="526" y1="104" x2="526" y2="444" stroke="#2FB6D8" stroke-width="0.5" opacity="0.08" stroke-dasharray="4,4"/>
+
+  <!-- Modification log strip at bottom -->
+  <rect x="32" y="456" width="740" height="30" rx="6" fill="#162035" stroke="#2FB6D8" stroke-width="0.5" opacity="0.5"/>
+  <text x="48" y="468" font-family="'Courier New', monospace" font-size="8" fill="#475569">14:22:01</text>
+  <text x="100" y="468" font-family="system-ui, sans-serif" font-size="8" fill="#64748b">Sarah K. → state changed</text>
+  <rect x="210" y="460" width="42" height="13" rx="3" fill="#2FB6D8" opacity="0.12"/>
+  <text x="231" y="470" text-anchor="middle" font-family="'Courier New', monospace" font-size="7" fill="#2FB6D8">Reserved→Lent</text>
+  <text x="262" y="468" font-family="system-ui, sans-serif" font-size="8" fill="#2FB6D8" opacity="0.5">· by Admin · Skyline Party Rentals</text>
+
+  <text x="480" y="468" font-family="'Courier New', monospace" font-size="8" fill="#475569">14:19:44</text>
+  <text x="532" y="468" font-family="system-ui, sans-serif" font-size="8" fill="#64748b">Dana F. → flagged</text>
+  <rect x="626" y="460" width="42" height="13" rx="3" fill="#ef4444" opacity="0.12"/>
+  <text x="647" y="470" text-anchor="middle" font-family="'Courier New', monospace" font-size="7" fill="#ef4444">Lent→Overdue</text>
+
+  <text x="48" y="480" font-family="'Courier New', monospace" font-size="8" fill="#2d3748">14:18:30</text>
+  <text x="100" y="480" font-family="system-ui, sans-serif" font-size="8" fill="#374151">New order created · Celebration Co. · Anna P. · 20 items</text>
+</svg>

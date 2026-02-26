@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import Image from "next/image";
 import { caseStudies } from "@/lib/caseStudies";
-import WorkGrid from "@/components/WorkGrid";
 import FadeIn from "@/components/motion/FadeIn";
 import Button from "@/components/ui/Button";
 import Eyebrow from "@/components/ui/Eyebrow";
@@ -38,7 +39,54 @@ export default function WorkPage() {
       {/* Case Study Grid */}
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
-          <WorkGrid caseStudies={caseStudies} />
+          <div className="grid md:grid-cols-3 gap-8">
+            {caseStudies.map((caseStudy) => (
+              <Link
+                key={caseStudy.slug}
+                href={`/work/${caseStudy.slug}`}
+                className="group"
+              >
+                <div className="bg-white border border-slate-200 rounded-lg overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full flex flex-col">
+                  {/* Zone 2 — Thumbnail */}
+                  <div className="relative aspect-[8/5] overflow-hidden">
+                    <Image
+                      src={caseStudy.thumbnailImage.src}
+                      alt={caseStudy.thumbnailImage.alt}
+                      width={800}
+                      height={500}
+                      className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                      unoptimized={caseStudy.thumbnailImage.src.endsWith('.svg')}
+                    />
+                  </div>
+
+                  <div className="p-6 flex flex-col flex-grow">
+                    <h2 className="text-xl font-semibold text-foreground group-hover:text-accent-primary transition-colors mb-3">
+                      {caseStudy.title}
+                    </h2>
+                    <p className="text-accent-muted mb-4 leading-relaxed text-sm flex-grow">
+                      {caseStudy.summary}
+                    </p>
+
+                    {/* Pills row */}
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {caseStudy.outcomes.slice(0, 2).map((outcome, idx) => (
+                        <span
+                          key={idx}
+                          className="text-xs px-3 py-1.5 bg-foreground text-white rounded-full font-medium"
+                        >
+                          {outcome}
+                        </span>
+                      ))}
+                    </div>
+
+                    <span className="text-sm text-accent-primary font-medium inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+                      Read case study <span className="transition-transform">→</span>
+                    </span>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 

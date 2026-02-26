@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0B1121"/>
+      <stop offset="50%" style="stop-color:#111827"/>
+      <stop offset="100%" style="stop-color:#0F172A"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#162035"/>
+      <stop offset="100%" style="stop-color:#0f1a2e"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#2FB6D8" stroke-width="0.15" opacity="0.2"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#bg)"/>
+  <rect width="800" height="500" fill="url(#grid)"/>
+
+  <!-- ── STEP 1: UPLOAD ── -->
+  <rect x="32" y="60" width="163" height="380" rx="10" fill="url(#cardGrad)" stroke="#2FB6D8" stroke-width="1" opacity="0.9"/>
+  <text x="48" y="90" font-family="'Courier New', monospace" font-size="10" fill="#2FB6D8" opacity="0.4">01</text>
+
+  <!-- File icon -->
+  <rect x="82" y="104" width="56" height="70" rx="4" fill="none" stroke="#2FB6D8" stroke-width="1.5"/>
+  <polyline points="110,104 110,88 138,88 138,104" fill="none" stroke="#2FB6D8" stroke-width="1.5" opacity="0.35"/>
+  <text x="110" y="136" text-anchor="middle" font-family="'Courier New', monospace" font-size="10" fill="#2FB6D8" opacity="0.8">STEP</text>
+  <text x="110" y="154" text-anchor="middle" font-family="'Courier New', monospace" font-size="9" fill="#2FB6D8" opacity="0.45">.step</text>
+  <!-- Upload arrow -->
+  <line x1="110" y1="188" x2="110" y2="206" stroke="#2FB6D8" stroke-width="1.5" opacity="0.6"/>
+  <polyline points="103,200 110,207 117,200" fill="none" stroke="#2FB6D8" stroke-width="1.5" opacity="0.6"/>
+
+  <text x="110" y="240" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="white">Upload</text>
+  <text x="110" y="262" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8">Design files</text>
+
+  <rect x="54" y="288" width="112" height="24" rx="4" fill="#2FB6D8" opacity="0.08"/>
+  <text x="110" y="304" text-anchor="middle" font-family="'Courier New', monospace" font-size="9" fill="#2FB6D8">CAD · STEP · DXF</text>
+
+  <!-- bottom check -->
+  <circle cx="110" cy="370" r="14" fill="none" stroke="#2FB6D8" stroke-width="1" opacity="0.35"/>
+  <polyline points="103,370 108,376 118,362" fill="none" stroke="#2FB6D8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" opacity="0.55"/>
+  <text x="110" y="404" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#475569">Geometry analyzed</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="200" y1="250" x2="228" y2="250" stroke="#2FB6D8" stroke-width="1.5" opacity="0.55"/>
+  <polyline points="221,243 229,250 221,257" fill="none" stroke="#2FB6D8" stroke-width="1.5" opacity="0.55"/>
+
+  <!-- ── STEP 2: CONFIGURE ── -->
+  <rect x="233" y="60" width="163" height="380" rx="10" fill="url(#cardGrad)" stroke="#2FB6D8" stroke-width="1" opacity="0.9"/>
+  <text x="249" y="90" font-family="'Courier New', monospace" font-size="10" fill="#2FB6D8" opacity="0.4">02</text>
+
+  <!-- Config rows - label on one line, value below -->
+  <rect x="249" y="104" width="131" height="46" rx="4" fill="#2FB6D8" opacity="0.06"/>
+  <text x="262" y="122" font-family="system-ui, sans-serif" font-size="10" fill="#64748b">Material</text>
+  <text x="262" y="140" font-family="'Courier New', monospace" font-size="11" fill="#2FB6D8">Aluminum 5052</text>
+
+  <rect x="249" y="158" width="131" height="46" rx="4" fill="#2FB6D8" opacity="0.06"/>
+  <text x="262" y="176" font-family="system-ui, sans-serif" font-size="10" fill="#64748b">Thickness</text>
+  <text x="262" y="194" font-family="'Courier New', monospace" font-size="11" fill="#2FB6D8">2mm</text>
+
+  <rect x="249" y="212" width="131" height="46" rx="4" fill="#2FB6D8" opacity="0.06"/>
+  <text x="262" y="230" font-family="system-ui, sans-serif" font-size="10" fill="#64748b">Quantity</text>
+  <text x="262" y="248" font-family="'Courier New', monospace" font-size="11" fill="#2FB6D8">120 units</text>
+
+  <rect x="249" y="266" width="131" height="46" rx="4" fill="#2FB6D8" opacity="0.06"/>
+  <text x="262" y="284" font-family="system-ui, sans-serif" font-size="10" fill="#64748b">Operations</text>
+  <text x="262" y="300" font-family="'Courier New', monospace" font-size="11" fill="#2FB6D8">Laser + Bend</text>
+
+  <text x="314" y="338" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="white">Configure</text>
+  <text x="314" y="358" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8">Materials &amp; specs</text>
+
+  <rect x="258" y="380" width="112" height="24" rx="4" fill="#2FB6D8" opacity="0.08"/>
+  <text x="314" y="396" text-anchor="middle" font-family="'Courier New', monospace" font-size="9" fill="#2FB6D8">MARGIN ENFORCED</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="401" y1="250" x2="429" y2="250" stroke="#2FB6D8" stroke-width="1.5" opacity="0.55"/>
+  <polyline points="422,243 430,250 422,257" fill="none" stroke="#2FB6D8" stroke-width="1.5" opacity="0.55"/>
+
+  <!-- ── STEP 3: PRICE ── -->
+  <rect x="434" y="60" width="163" height="380" rx="10" fill="url(#cardGrad)" stroke="#2FB6D8" stroke-width="1" opacity="0.9"/>
+  <text x="450" y="90" font-family="'Courier New', monospace" font-size="10" fill="#2FB6D8" opacity="0.4">03</text>
+
+  <text x="516" y="116" text-anchor="middle" font-family="'Courier New', monospace" font-size="9" fill="#475569">QUOTE #5071</text>
+  <line x1="450" y1="124" x2="582" y2="124" stroke="#2FB6D8" stroke-width="0.5" opacity="0.15"/>
+
+  <!-- Line items -->
+  <text x="450" y="146" font-family="system-ui, sans-serif" font-size="10" fill="#64748b">Parts (3 items)</text>
+  <text x="582" y="146" text-anchor="end" font-family="'Courier New', monospace" font-size="10" fill="#e2e8f0">$1,240.20</text>
+
+  <text x="450" y="170" font-family="system-ui, sans-serif" font-size="10" fill="#64748b">Anodizing finish</text>
+  <text x="582" y="170" text-anchor="end" font-family="'Courier New', monospace" font-size="10" fill="#e2e8f0">$48.00</text>
+
+  <text x="450" y="194" font-family="system-ui, sans-serif" font-size="10" fill="#64748b">Express shipping</text>
+  <text x="582" y="194" text-anchor="end" font-family="'Courier New', monospace" font-size="10" fill="#e2e8f0">$91.00</text>
+
+  <line x1="450" y1="206" x2="582" y2="206" stroke="#2FB6D8" stroke-width="0.5" opacity="0.25"/>
+
+  <text x="450" y="228" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="white">Total</text>
+  <text x="582" y="232" text-anchor="end" font-family="'Courier New', monospace" font-size="18" font-weight="700" fill="#2FB6D8">$1,331.06</text>
+
+  <text x="516" y="290" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="white">Price</text>
+  <text x="516" y="312" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8">Instant &amp; accurate</text>
+
+  <rect x="460" y="336" width="112" height="24" rx="4" fill="#2FB6D8" opacity="0.08"/>
+  <text x="516" y="352" text-anchor="middle" font-family="'Courier New', monospace" font-size="9" fill="#2FB6D8">0 PRICING ERRORS</text>
+
+  <!-- bottom check -->
+  <circle cx="516" cy="390" r="14" fill="none" stroke="#2FB6D8" stroke-width="1" opacity="0.35"/>
+  <polyline points="509,390 514,396 524,382" fill="none" stroke="#2FB6D8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" opacity="0.55"/>
+  <text x="516" y="424" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#475569">Stripe processed</text>
+
+  <!-- Arrow 3→4 -->
+  <line x1="602" y1="250" x2="630" y2="250" stroke="#2FB6D8" stroke-width="1.5" opacity="0.55"/>
+  <polyline points="623,243 631,250 623,257" fill="none" stroke="#2FB6D8" stroke-width="1.5" opacity="0.55"/>
+
+  <!-- ── STEP 4: PURCHASE ── -->
+  <rect x="635" y="60" width="133" height="380" rx="10" fill="url(#cardGrad)" stroke="#2FB6D8" stroke-width="1.5" filter="url(#glow)" opacity="0.95"/>
+  <text x="651" y="90" font-family="'Courier New', monospace" font-size="10" fill="#2FB6D8" opacity="0.4">04</text>
+
+  <!-- Big check -->
+  <circle cx="701" cy="180" r="38" fill="#2FB6D8" opacity="0.06"/>
+  <circle cx="701" cy="180" r="28" fill="none" stroke="#2FB6D8" stroke-width="1.5" opacity="0.35"/>
+  <polyline points="685,180 697,192 719,164" fill="none" stroke="#2FB6D8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <text x="701" y="236" text-anchor="middle" font-family="'Courier New', monospace" font-size="9" fill="#2FB6D8" opacity="0.65">ORDER CONFIRMED</text>
+
+  <text x="701" y="290" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="white">Purchase</text>
+  <text x="701" y="312" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8">Auto-synced to ERP</text>
+
+  <rect x="647" y="336" width="108" height="24" rx="4" fill="#2FB6D8" opacity="0.12"/>
+  <text x="701" y="352" text-anchor="middle" font-family="'Courier New', monospace" font-size="9" fill="#2FB6D8">100% AUTO-SYNCED</text>
+
+  <circle cx="701" cy="390" r="14" fill="#2FB6D8" opacity="0.12"/>
+  <polyline points="694,390 699,396 709,382" fill="none" stroke="#2FB6D8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="701" y="424" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#475569">Production handoff</text>
+</svg>

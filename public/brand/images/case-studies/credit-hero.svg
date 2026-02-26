@@ -1,0 +1,206 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 520" width="760" height="520">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0B1121"/>
+      <stop offset="50%" style="stop-color:#111827"/>
+      <stop offset="100%" style="stop-color:#0F172A"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#2FB6D8" stroke-width="0.15" opacity="0.2"/>
+    </pattern>
+    <linearGradient id="appHeader" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1a3a6e"/>
+      <stop offset="100%" style="stop-color:#1e40af"/>
+    </linearGradient>
+    <linearGradient id="scoreBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ef4444"/>
+      <stop offset="45%" style="stop-color:#f59e0b"/>
+      <stop offset="100%" style="stop-color:#22c55e"/>
+    </linearGradient>
+    <linearGradient id="btnBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2563eb"/>
+      <stop offset="100%" style="stop-color:#1d4ed8"/>
+    </linearGradient>
+    <filter id="phoneShadow">
+      <feDropShadow dx="0" dy="14" stdDeviation="28" flood-color="#000" flood-opacity="0.75"/>
+    </filter>
+
+    <!-- Phone outer shape — defines the entire phone silhouette including screen -->
+    <!-- rx=36 matches a modern smartphone rounding -->
+    <clipPath id="phoneClip">
+      <rect x="258" y="18" width="248" height="490" rx="36"/>
+    </clipPath>
+  </defs>
+
+  <rect width="760" height="520" fill="url(#bg)"/>
+  <rect width="760" height="520" fill="url(#grid)"/>
+
+  <!-- Left copy -->
+  <text x="46" y="96" font-family="'Courier New', monospace" font-size="9" fill="#2FB6D8" opacity="0.5" letter-spacing="2">KREDIT · MOBILE APP</text>
+  <text x="46" y="126" font-family="Georgia, serif" font-size="22" font-weight="700" fill="white">Personalized</text>
+  <text x="46" y="152" font-family="Georgia, serif" font-size="22" font-weight="700" fill="white">Credit Building</text>
+  <text x="46" y="178" font-family="Georgia, serif" font-size="22" font-weight="700" fill="#2FB6D8">Robo-Adviser</text>
+  <line x1="46" y1="196" x2="180" y2="196" stroke="#2FB6D8" stroke-width="1" opacity="0.3"/>
+  <text x="46" y="222" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8">AI analyzes 7,300+ credit data</text>
+  <text x="46" y="240" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8">points and builds a personalized</text>
+  <text x="46" y="258" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8">plan to reach your target score.</text>
+
+  <rect x="46" y="280" width="185" height="66" rx="8" fill="#162035" stroke="#2FB6D8" stroke-width="0.5" opacity="0.8"/>
+  <text x="66" y="304" font-family="'Courier New', monospace" font-size="20" font-weight="700" fill="#2FB6D8">+107</text>
+  <text x="128" y="304" font-family="system-ui, sans-serif" font-size="10" fill="#64748b">avg pts gained</text>
+  <text x="66" y="332" font-family="'Courier New', monospace" font-size="20" font-weight="700" fill="#22c55e">20k+</text>
+  <text x="126" y="332" font-family="system-ui, sans-serif" font-size="10" fill="#64748b">users enrolled</text>
+
+  <rect x="46" y="366" width="68" height="22" rx="11" fill="#22c55e" opacity="0.12" stroke="#22c55e" stroke-width="0.75"/>
+  <text x="80" y="381" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#22c55e">① Assess</text>
+  <rect x="120" y="366" width="60" height="22" rx="11" fill="#f59e0b" opacity="0.12" stroke="#f59e0b" stroke-width="0.75"/>
+  <text x="150" y="381" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#f59e0b">② Repair</text>
+  <rect x="46" y="394" width="66" height="22" rx="11" fill="#2FB6D8" opacity="0.15" stroke="#2FB6D8" stroke-width="1"/>
+  <text x="79" y="409" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" font-weight="700" fill="#2FB6D8">③ Toolkit</text>
+  <rect x="118" y="394" width="66" height="22" rx="11" fill="#a78bfa" opacity="0.1" stroke="#a78bfa" stroke-width="0.5"/>
+  <text x="151" y="409" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#a78bfa">④ Capital</text>
+
+  <!-- ══════════════════════════════════════════
+       PHONE: drawn as a single shape with drop shadow.
+       The shell is the SAME rx=36 rect as the clip.
+       The app content is clipped to that same shape —
+       so there is zero gap between shell edge and content.
+  ══════════════════════════════════════════ -->
+
+  <!-- Shadow layer (slightly larger, blurred) -->
+  <rect x="258" y="18" width="248" height="490" rx="36" fill="#0a0f1e" filter="url(#phoneShadow)"/>
+
+  <!-- Phone shell fill — this IS the phone body. The screen content below
+       will cover the interior. The shell color only shows as the bezel. -->
+  <rect x="258" y="18" width="248" height="490" rx="36" fill="#1a2744"/>
+
+  <!-- Physical buttons (outside clip, on the shell) -->
+  <rect x="254" y="118" width="5" height="28" rx="2.5" fill="#111d36"/>
+  <rect x="254" y="154" width="5" height="28" rx="2.5" fill="#111d36"/>
+  <rect x="505" y="136" width="5" height="44" rx="2.5" fill="#111d36"/>
+
+  <!-- ── ALL APP UI CONTENT clipped inside phone shape ── -->
+  <g clip-path="url(#phoneClip)">
+
+    <!-- Screen background = white app -->
+    <rect x="258" y="18" width="248" height="490" fill="white"/>
+
+    <!-- Status bar area at very top -->
+    <rect x="258" y="18" width="248" height="18" fill="url(#appHeader)"/>
+    <text x="382" y="31" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="white" opacity="0.5">9:41</text>
+
+    <!-- Dynamic island pill -->
+    <rect x="338" y="22" width="88" height="12" rx="6" fill="#0a1222"/>
+
+    <!-- App header -->
+    <rect x="258" y="36" width="248" height="46" fill="url(#appHeader)"/>
+    <text x="382" y="62" text-anchor="middle" font-family="Georgia, serif" font-size="16" font-weight="700" fill="white" letter-spacing="1">kredit</text>
+    <circle cx="272" cy="59" r="12" fill="white" opacity="0.1"/>
+    <text x="272" y="64" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="white">K</text>
+    <circle cx="492" cy="59" r="12" fill="white" opacity="0.1"/>
+    <text x="492" y="64" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="white">J</text>
+
+    <!-- Subheader -->
+    <rect x="258" y="82" width="248" height="32" fill="#f1f5f9"/>
+    <text x="272" y="96" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#1a3a6e">Dashboard</text>
+    <text x="272" y="108" font-family="system-ui, sans-serif" font-size="8" fill="#94a3b8">Good Morning, James</text>
+
+    <line x1="258" y1="114" x2="506" y2="114" stroke="#e2e8f0" stroke-width="1"/>
+
+    <!-- Stats row -->
+    <rect x="258" y="114" width="248" height="52" fill="white"/>
+    <text x="306" y="134" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#1a3a6e">7.3k</text>
+    <text x="306" y="147" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#94a3b8">Data Points</text>
+    <text x="306" y="158" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#94a3b8">Analyzed</text>
+    <line x1="344" y1="122" x2="344" y2="160" stroke="#e2e8f0" stroke-width="1"/>
+    <text x="382" y="134" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#1a3a6e">3</text>
+    <text x="382" y="147" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#94a3b8">Disputes</text>
+    <text x="382" y="158" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#94a3b8">Sent</text>
+    <line x1="420" y1="122" x2="420" y2="160" stroke="#e2e8f0" stroke-width="1"/>
+    <text x="458" y="134" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#1a3a6e">15</text>
+    <text x="458" y="147" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#94a3b8">Days Until</text>
+    <text x="458" y="158" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#94a3b8">Refresh</text>
+
+    <line x1="258" y1="166" x2="506" y2="166" stroke="#e2e8f0" stroke-width="1"/>
+
+    <!-- Building Journey -->
+    <rect x="258" y="166" width="248" height="154" fill="white"/>
+    <text x="272" y="184" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#1a3a6e">Your Building Journey</text>
+    <text x="492" y="184" text-anchor="end" font-family="system-ui, sans-serif" font-size="8" fill="#2563eb">TruScore™</text>
+
+    <!-- Big score -->
+    <text x="382" y="224" text-anchor="middle" font-family="Georgia, serif" font-size="38" font-weight="700" fill="#1a56db">610</text>
+    <text x="422" y="204" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#22c55e">+26</text>
+    <text x="382" y="240" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#94a3b8">Current Score</text>
+
+    <!-- Score progress bar -->
+    <rect x="276" y="256" width="212" height="8" rx="4" fill="#e2e8f0"/>
+    <rect x="276" y="256" width="106" height="8" rx="4" fill="url(#scoreBar)"/>
+    <circle cx="382" cy="260" r="6.5" fill="#1a56db" stroke="white" stroke-width="2"/>
+
+    <text x="276" y="280" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#ef4444">584</text>
+    <text x="488" y="280" text-anchor="end" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#22c55e">708</text>
+    <text x="276" y="292" font-family="system-ui, sans-serif" font-size="7" fill="#94a3b8">Started</text>
+    <text x="488" y="292" text-anchor="end" font-family="system-ui, sans-serif" font-size="7" fill="#94a3b8">Target · 22%</text>
+
+    <text x="382" y="312" text-anchor="middle" font-family="'Courier New', monospace" font-size="9" fill="#2FB6D8">↑ +88 pts since start</text>
+
+    <line x1="258" y1="322" x2="506" y2="322" stroke="#e2e8f0" stroke-width="1"/>
+
+    <!-- Credit Building -->
+    <rect x="258" y="322" width="248" height="120" fill="#f8fafc"/>
+    <text x="272" y="340" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#1a3a6e">Credit Building</text>
+    <text x="492" y="340" text-anchor="end" font-family="system-ui, sans-serif" font-size="8" fill="#2563eb">Next Move</text>
+
+    <rect x="272" y="348" width="212" height="38" rx="9" fill="url(#btnBlue)"/>
+    <text x="382" y="363" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="white">Balance Your Payments</text>
+    <text x="472" y="378" text-anchor="end" font-family="system-ui, sans-serif" font-size="8" fill="white" opacity="0.65">More →</text>
+
+    <line x1="258" y1="392" x2="506" y2="392" stroke="#e2e8f0" stroke-width="1"/>
+
+    <!-- Tool counts -->
+    <rect x="258" y="392" width="248" height="50" fill="white"/>
+    <text x="330" y="418" text-anchor="middle" font-family="Georgia, serif" font-size="20" font-weight="700" fill="#1a3a6e">7</text>
+    <text x="330" y="432" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#94a3b8">Available Tools</text>
+    <line x1="382" y1="398" x2="382" y2="436" stroke="#e2e8f0" stroke-width="1"/>
+    <text x="434" y="418" text-anchor="middle" font-family="Georgia, serif" font-size="20" font-weight="700" fill="#2563eb">4</text>
+    <text x="434" y="432" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#94a3b8">Active Tools</text>
+
+    <!-- Bottom nav -->
+    <rect x="258" y="442" width="248" height="66" fill="white"/>
+    <line x1="258" y1="442" x2="506" y2="442" stroke="#e2e8f0" stroke-width="1"/>
+    <text x="296" y="464" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" fill="#2563eb">⌂</text>
+    <text x="348" y="463" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" fill="#cbd5e1">◎</text>
+    <text x="400" y="462" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1">⚙</text>
+    <text x="452" y="463" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" fill="#cbd5e1">♟</text>
+    <!-- Home indicator pill -->
+    <rect x="334" y="476" width="96" height="5" rx="2.5" fill="#e2e8f0"/>
+
+  </g>
+
+  <!-- Phone bezel ring on top (drawn AFTER clip so it sits on top of screen content) -->
+  <rect x="258" y="18" width="248" height="490" rx="36" fill="none" stroke="#2a3f6a" stroke-width="3"/>
+  <!-- Inner bezel subtle highlight top edge -->
+  <rect x="260" y="20" width="244" height="488" rx="34" fill="none" stroke="white" stroke-width="0.5" opacity="0.06"/>
+
+  <!-- Right callout annotations -->
+  <line x1="508" y1="184" x2="548" y2="184" stroke="#2FB6D8" stroke-width="1" stroke-dasharray="3,2" opacity="0.5"/>
+  <rect x="548" y="172" width="148" height="28" rx="5" fill="#162035" stroke="#2FB6D8" stroke-width="0.5"/>
+  <text x="562" y="184" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#2FB6D8">TruScore™ Engine</text>
+  <text x="562" y="195" font-family="system-ui, sans-serif" font-size="8" fill="#64748b">7,300+ data points analyzed</text>
+
+  <line x1="508" y1="260" x2="548" y2="260" stroke="#22c55e" stroke-width="1" stroke-dasharray="3,2" opacity="0.5"/>
+  <rect x="548" y="248" width="148" height="28" rx="5" fill="#162035" stroke="#22c55e" stroke-width="0.5"/>
+  <text x="562" y="260" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#22c55e">Score Progress</text>
+  <text x="562" y="271" font-family="system-ui, sans-serif" font-size="8" fill="#64748b">584 → 610 → 708 target</text>
+
+  <line x1="508" y1="367" x2="548" y2="367" stroke="#2563eb" stroke-width="1" stroke-dasharray="3,2" opacity="0.5"/>
+  <rect x="548" y="355" width="148" height="28" rx="5" fill="#162035" stroke="#2563eb" stroke-width="0.5"/>
+  <text x="562" y="367" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#2FB6D8">AI Next Move Card</text>
+  <text x="562" y="378" font-family="system-ui, sans-serif" font-size="8" fill="#64748b">Personalized action item</text>
+
+  <line x1="508" y1="415" x2="548" y2="415" stroke="#f59e0b" stroke-width="1" stroke-dasharray="3,2" opacity="0.5"/>
+  <rect x="548" y="403" width="148" height="28" rx="5" fill="#162035" stroke="#f59e0b" stroke-width="0.5"/>
+  <text x="562" y="415" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#f59e0b">Building Toolkit</text>
+  <text x="562" y="426" font-family="system-ui, sans-serif" font-size="8" fill="#64748b">7 available · 4 active</text>
+</svg>

@@ -1,0 +1,210 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 520" width="760" height="520">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0B1121"/>
+      <stop offset="50%" style="stop-color:#111827"/>
+      <stop offset="100%" style="stop-color:#0F172A"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#162035"/>
+      <stop offset="100%" style="stop-color:#0f1a2e"/>
+    </linearGradient>
+    <linearGradient id="activeCard" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a2a42"/>
+      <stop offset="100%" style="stop-color:#142238"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#2FB6D8" stroke-width="0.15" opacity="0.15"/>
+    </pattern>
+    <clipPath id="windowClip">
+      <rect x="0" y="0" width="760" height="520" rx="12"/>
+    </clipPath>
+  </defs>
+
+  <!-- Window frame -->
+  <rect width="760" height="520" rx="12" fill="url(#bg)"/>
+  <rect width="760" height="520" rx="12" fill="url(#grid)" clip-path="url(#windowClip)"/>
+
+  <!-- Browser chrome bar -->
+  <rect x="0" y="0" width="760" height="42" rx="0" fill="#0d1829"/>
+  <rect x="0" y="0" width="760" height="12" fill="#0d1829"/>
+  <rect x="0" y="30" width="760" height="12" fill="#0d1829"/>
+  <!-- Three dots -->
+  <circle cx="24" cy="21" r="5" fill="#ef4444" opacity="0.8"/>
+  <circle cx="42" cy="21" r="5" fill="#f59e0b" opacity="0.8"/>
+  <circle cx="60" cy="21" r="5" fill="#22c55e" opacity="0.8"/>
+  <!-- URL bar -->
+  <rect x="88" y="10" width="480" height="22" rx="5" fill="#162035"/>
+  <text x="328" y="25" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#475569">app.rapidfab.com/quote/5071</text>
+  <!-- Chrome border -->
+  <line x1="0" y1="42" x2="760" y2="42" stroke="#2FB6D8" stroke-width="0.5" opacity="0.2"/>
+
+  <!-- ── LEFT SIDEBAR ── -->
+  <rect x="0" y="42" width="160" height="478" fill="#0d1829"/>
+  <line x1="160" y1="42" x2="160" y2="520" stroke="#2FB6D8" stroke-width="0.5" opacity="0.15"/>
+
+  <!-- Sidebar nav items -->
+  <text x="20" y="76" font-family="system-ui, sans-serif" font-size="10" fill="#475569" letter-spacing="1">QUOTES</text>
+
+  <!-- Active nav item -->
+  <rect x="8" y="84" width="144" height="32" rx="6" fill="#2FB6D8" opacity="0.1"/>
+  <rect x="8" y="84" width="3" height="32" rx="1" fill="#2FB6D8"/>
+  <text x="24" y="104" font-family="system-ui, sans-serif" font-size="11" fill="#2FB6D8" font-weight="600">Quote #5071</text>
+
+  <rect x="8" y="122" width="144" height="32" rx="6" fill="none"/>
+  <text x="24" y="142" font-family="system-ui, sans-serif" font-size="11" fill="#475569">Quote #5068</text>
+
+  <rect x="8" y="160" width="144" height="32" rx="6" fill="none"/>
+  <text x="24" y="180" font-family="system-ui, sans-serif" font-size="11" fill="#475569">Quote #5064</text>
+
+  <rect x="8" y="198" width="144" height="32" rx="6" fill="none"/>
+  <text x="24" y="218" font-family="system-ui, sans-serif" font-size="11" fill="#475569">Quote #5061</text>
+
+  <line x1="20" y1="244" x2="148" y2="244" stroke="#2FB6D8" stroke-width="0.5" opacity="0.1"/>
+
+  <text x="20" y="268" font-family="system-ui, sans-serif" font-size="10" fill="#475569" letter-spacing="1">ORDERS</text>
+  <text x="24" y="294" font-family="system-ui, sans-serif" font-size="11" fill="#475569">Order #1042</text>
+  <text x="24" y="320" font-family="system-ui, sans-serif" font-size="11" fill="#475569">Order #1038</text>
+
+  <!-- ── MAIN CONTENT ── -->
+
+  <!-- Top breadcrumb / title row -->
+  <text x="180" y="66" font-family="'Courier New', monospace" font-size="9" fill="#475569">QUOTE #5071  ·  PUMP SHIELD ASSEMBLY</text>
+
+  <!-- State pipeline at top -->
+  <!-- Step pills -->
+  <!-- Upload -->
+  <rect x="180" y="76" width="80" height="24" rx="12" fill="#2FB6D8" opacity="0.15"/>
+  <circle cx="196" cy="88" r="5" fill="#2FB6D8"/>
+  <text x="207" y="92" font-family="system-ui, sans-serif" font-size="9" fill="#2FB6D8" font-weight="600">Upload</text>
+  <!-- connector -->
+  <line x1="262" y1="88" x2="274" y2="88" stroke="#2FB6D8" stroke-width="1" opacity="0.4"/>
+  <polyline points="270,84 275,88 270,92" fill="none" stroke="#2FB6D8" stroke-width="1" opacity="0.4"/>
+  <!-- Configure -->
+  <rect x="276" y="76" width="90" height="24" rx="12" fill="#2FB6D8" opacity="0.15"/>
+  <circle cx="292" cy="88" r="5" fill="#2FB6D8"/>
+  <text x="303" y="92" font-family="system-ui, sans-serif" font-size="9" fill="#2FB6D8" font-weight="600">Configure</text>
+  <!-- connector -->
+  <line x1="368" y1="88" x2="380" y2="88" stroke="#2FB6D8" stroke-width="1" opacity="0.4"/>
+  <polyline points="376,84 381,88 376,92" fill="none" stroke="#2FB6D8" stroke-width="1" opacity="0.4"/>
+  <!-- Price -->
+  <rect x="382" y="76" width="70" height="24" rx="12" fill="#2FB6D8" opacity="0.15"/>
+  <circle cx="398" cy="88" r="5" fill="#2FB6D8"/>
+  <text x="409" y="92" font-family="system-ui, sans-serif" font-size="9" fill="#2FB6D8" font-weight="600">Price</text>
+  <!-- connector -->
+  <line x1="454" y1="88" x2="466" y2="88" stroke="#2FB6D8" stroke-width="1" opacity="0.4"/>
+  <polyline points="462,84 467,88 462,92" fill="none" stroke="#2FB6D8" stroke-width="1" opacity="0.4"/>
+  <!-- Purchase - active/highlighted -->
+  <rect x="468" y="76" width="90" height="24" rx="12" fill="#2FB6D8" opacity="0.9"/>
+  <polyline points="480,88 485,93 496,81" fill="none" stroke="#0B1121" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="502" y="92" font-family="system-ui, sans-serif" font-size="9" fill="#0B1121" font-weight="700">Purchase</text>
+
+  <!-- ── MAIN PANELS ── -->
+
+  <!-- LEFT PANEL: Parts list -->
+  <rect x="180" y="114" width="310" height="240" rx="8" fill="url(#cardGrad)" stroke="#2FB6D8" stroke-width="0.5" opacity="0.8"/>
+  <text x="196" y="136" font-family="system-ui, sans-serif" font-size="10" fill="#64748b" letter-spacing="1">LINE ITEMS</text>
+  <line x1="180" y1="144" x2="490" y2="144" stroke="#2FB6D8" stroke-width="0.5" opacity="0.1"/>
+
+  <!-- Part rows -->
+  <!-- Row 1 -->
+  <rect x="192" y="152" width="8" height="8" rx="1" fill="#2FB6D8" opacity="0.4"/>
+  <text x="208" y="161" font-family="system-ui, sans-serif" font-size="10" fill="#e2e8f0">Pump Shield.step</text>
+  <text x="208" y="174" font-family="system-ui, sans-serif" font-size="9" fill="#475569">Aluminum 5052-H32  ·  1 item  ·  Lead 5 days</text>
+  <text x="478" y="161" text-anchor="end" font-family="'Courier New', monospace" font-size="11" fill="#2FB6D8">$791.94</text>
+
+  <line x1="192" y1="186" x2="478" y2="186" stroke="#2FB6D8" stroke-width="0.5" opacity="0.08"/>
+
+  <!-- Row 2 -->
+  <rect x="192" y="194" width="8" height="8" rx="1" fill="#2FB6D8" opacity="0.4"/>
+  <text x="208" y="203" font-family="system-ui, sans-serif" font-size="10" fill="#e2e8f0">1003387.step</text>
+  <text x="208" y="216" font-family="system-ui, sans-serif" font-size="9" fill="#475569">Aluminum 5052-H32  ·  1 item  ·  Lead 6 days</text>
+  <text x="478" y="203" text-anchor="end" font-family="'Courier New', monospace" font-size="11" fill="#2FB6D8">$250.26</text>
+
+  <line x1="192" y1="228" x2="478" y2="228" stroke="#2FB6D8" stroke-width="0.5" opacity="0.08"/>
+
+  <!-- Row 3 -->
+  <rect x="192" y="236" width="8" height="8" rx="1" fill="#2FB6D8" opacity="0.4"/>
+  <text x="208" y="245" font-family="system-ui, sans-serif" font-size="10" fill="#e2e8f0">1003377.step</text>
+  <text x="208" y="258" font-family="system-ui, sans-serif" font-size="9" fill="#475569">Aluminum 5052-H32  ·  1 item  ·  Lead 6 days</text>
+  <text x="478" y="245" text-anchor="end" font-family="'Courier New', monospace" font-size="11" fill="#2FB6D8">$288.86</text>
+
+  <line x1="192" y1="270" x2="478" y2="270" stroke="#2FB6D8" stroke-width="0.5" opacity="0.08"/>
+
+  <!-- Totals -->
+  <text x="208" y="290" font-family="system-ui, sans-serif" font-size="10" fill="#64748b">Subtotal</text>
+  <text x="478" y="290" text-anchor="end" font-family="'Courier New', monospace" font-size="10" fill="#94a3b8">$1,240.20</text>
+
+  <text x="208" y="308" font-family="system-ui, sans-serif" font-size="10" fill="#64748b">Shipping (Express 2-day)</text>
+  <text x="478" y="308" text-anchor="end" font-family="'Courier New', monospace" font-size="10" fill="#94a3b8">$91.00</text>
+
+  <line x1="192" y1="318" x2="478" y2="318" stroke="#2FB6D8" stroke-width="0.5" opacity="0.15"/>
+
+  <text x="208" y="338" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="white">Total</text>
+  <text x="478" y="340" text-anchor="end" font-family="'Courier New', monospace" font-size="20" font-weight="700" fill="#2FB6D8" filter="url(#glow)">$1,331.06</text>
+
+  <!-- RIGHT PANEL: Order summary + actions -->
+  <rect x="504" y="114" width="236" height="240" rx="8" fill="url(#activeCard)" stroke="#2FB6D8" stroke-width="1" opacity="0.9"/>
+
+  <text x="520" y="136" font-family="system-ui, sans-serif" font-size="10" fill="#64748b" letter-spacing="1">ORDER SUMMARY</text>
+  <line x1="504" y1="144" x2="740" y2="144" stroke="#2FB6D8" stroke-width="0.5" opacity="0.15"/>
+
+  <!-- Shipping options -->
+  <text x="520" y="164" font-family="system-ui, sans-serif" font-size="10" fill="#64748b">Delivery</text>
+  <rect x="520" y="172" width="204" height="28" rx="5" fill="#2FB6D8" opacity="0.08"/>
+  <circle cx="534" cy="186" r="5" fill="none" stroke="#2FB6D8" stroke-width="1.5"/>
+  <text x="546" y="190" font-family="system-ui, sans-serif" font-size="10" fill="#94a3b8">Standard  5–7 day</text>
+
+  <rect x="520" y="206" width="204" height="28" rx="5" fill="#2FB6D8" opacity="0.15" stroke="#2FB6D8" stroke-width="0.75"/>
+  <circle cx="534" cy="220" r="5" fill="#2FB6D8"/>
+  <circle cx="534" cy="220" r="2.5" fill="#0B1121"/>
+  <text x="546" y="224" font-family="system-ui, sans-serif" font-size="10" fill="#2FB6D8" font-weight="600">Express  2-day  +$91</text>
+
+  <!-- Payment row -->
+  <text x="520" y="254" font-family="system-ui, sans-serif" font-size="10" fill="#64748b">Payment</text>
+  <rect x="520" y="262" width="204" height="28" rx="5" fill="#2FB6D8" opacity="0.06"/>
+  <text x="534" y="280" font-family="system-ui, sans-serif" font-size="10" fill="#94a3b8">Visa  ···· 4242</text>
+  <text x="720" y="280" text-anchor="end" font-family="system-ui, sans-serif" font-size="9" fill="#2FB6D8">Change</text>
+
+  <!-- CTA button -->
+  <rect x="520" y="302" width="204" height="36" rx="7" fill="#2FB6D8"/>
+  <text x="622" y="324" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#0B1121">Complete Checkout</text>
+
+  <!-- ── BOTTOM PANEL: State transition log ── -->
+  <rect x="180" y="368" width="560" height="128" rx="8" fill="url(#cardGrad)" stroke="#2FB6D8" stroke-width="0.5" opacity="0.7"/>
+  <text x="196" y="388" font-family="system-ui, sans-serif" font-size="10" fill="#64748b" letter-spacing="1">STATE TRANSITION LOG</text>
+  <line x1="180" y1="396" x2="740" y2="396" stroke="#2FB6D8" stroke-width="0.5" opacity="0.1"/>
+
+  <!-- Log rows -->
+  <text x="196" y="414" font-family="'Courier New', monospace" font-size="9" fill="#475569">09:12:04</text>
+  <rect x="250" y="405" width="56" height="14" rx="3" fill="#2FB6D8" opacity="0.12"/>
+  <text x="278" y="416" text-anchor="middle" font-family="'Courier New', monospace" font-size="8" fill="#2FB6D8">UPLOAD</text>
+  <text x="316" y="414" font-family="system-ui, sans-serif" font-size="9" fill="#64748b">3 files parsed · geometry validated · materials detected</text>
+
+  <text x="196" y="432" font-family="'Courier New', monospace" font-size="9" fill="#475569">09:12:09</text>
+  <rect x="250" y="423" width="72" height="14" rx="3" fill="#2FB6D8" opacity="0.12"/>
+  <text x="286" y="434" text-anchor="middle" font-family="'Courier New', monospace" font-size="8" fill="#2FB6D8">CONFIGURE</text>
+  <text x="332" y="432" font-family="system-ui, sans-serif" font-size="9" fill="#64748b">Material rules applied · margin threshold enforced</text>
+
+  <text x="196" y="450" font-family="'Courier New', monospace" font-size="9" fill="#475569">09:12:11</text>
+  <rect x="250" y="441" width="46" height="14" rx="3" fill="#2FB6D8" opacity="0.12"/>
+  <text x="273" y="452" text-anchor="middle" font-family="'Courier New', monospace" font-size="8" fill="#2FB6D8">PRICE</text>
+  <text x="306" y="450" font-family="system-ui, sans-serif" font-size="9" fill="#64748b">Carrier API queried · Stripe invoice generated · quote locked</text>
+
+  <text x="196" y="468" font-family="'Courier New', monospace" font-size="9" fill="#475569">09:17:38</text>
+  <rect x="250" y="459" width="68" height="14" rx="3" fill="#2FB6D8" opacity="0.25"/>
+  <text x="284" y="470" text-anchor="middle" font-family="'Courier New', monospace" font-size="8" fill="#2FB6D8">PURCHASE</text>
+  <text x="328" y="468" font-family="system-ui, sans-serif" font-size="9" fill="#94a3b8">Payment confirmed · order synced to ERP · production handoff complete</text>
+
+  <!-- Blinking cursor at end of last log line -->
+  <rect x="650" y="460" width="6" height="11" rx="1" fill="#2FB6D8" opacity="0.7">
+    <animate attributeName="opacity" values="0.7;0;0.7" dur="1.2s" repeatCount="indefinite"/>
+  </rect>
+</svg>

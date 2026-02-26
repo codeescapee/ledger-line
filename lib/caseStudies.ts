@@ -7,7 +7,7 @@ export interface CaseStudy {
   metrics?: { label: string; value: string }[];
   outcomes: string[];
   capabilities: string[];
-  iconImage?: { src: string; alt: string };
+  iconImage: { src: string; alt: string };
   thumbnailImage: { src: string; alt: string };
   heroImage: { src: string; alt: string };
   problem: string[];
@@ -34,8 +34,9 @@ export const caseStudies: CaseStudy[] = [
     ],
     outcomes: ["Instant quotes", "Pricing risk eliminated", "Orders auto-synced"],
     capabilities: ["Pricing engine", "File parsing", "State-driven workflows"],
-    thumbnailImage: { src: "/brand/images/case-studies/quoting-thumb.png", alt: "Manufacturing quoting system workflow" },
-    heroImage: { src: "/brand/images/case-studies/quoting-hero.png", alt: "Quoting engine architecture" },
+    iconImage: { src: "/brand/images/case-studies/quoting-icon.svg", alt: "Quoting system icon" },
+    thumbnailImage: { src: "/brand/images/case-studies/quoting-thumb.svg", alt: "Manufacturing quoting system workflow" },
+    heroImage: { src: "/brand/images/case-studies/quoting-hero.svg", alt: "Quoting engine architecture" },
     problem: [
       "Getting a quote took days. Customers would send files, then wait while engineers manually priced each part using disconnected spreadsheets. Margins were inconsistent, pricing errors slipped through, and the back-and-forth killed deals before they started.",
       "Once a quote was accepted, the handoff to production was just as broken. Orders arrived with incomplete specs or outdated pricing because nothing was connected. Engineers spent as much time fixing data as they did quoting."
@@ -73,9 +74,9 @@ export const caseStudies: CaseStudy[] = [
     ],
     outcomes: ["Fewer errors", "Clear ownership", "Faster onboarding", "Reduced handoffs", "Inventory accuracy"],
     capabilities: ["Role-based workflows", "Permission enforcement", "Inventory states", "Order validation", "Admin overrides"],
-    iconImage: { src: "/brand/images/case-studies/inventory-icon.svg", alt: "Inventory system icon" },
-    thumbnailImage: { src: "/brand/images/case-studies/inventory-thumb.png", alt: "Inventory operations workflow" },
-    heroImage: { src: "/brand/images/case-studies/inventory-hero.png", alt: "Operations platform architecture" },
+    iconImage: { src: "/brand/images/case-studies/inventory-icon-v2.svg", alt: "Inventory system icon" },
+    thumbnailImage: { src: "/brand/images/case-studies/inventory-thumb.svg", alt: "Inventory operations workflow" },
+    heroImage: { src: "/brand/images/case-studies/inventory-hero.svg", alt: "Operations platform architecture" },
     problem: [
       "Everything ran on spreadsheets and email. Business rules lived in Excel formulas that nobody documented, and as the team grew, mistakes multiplied. When something went wrong, there was no way to figure out what happened or who touched what.",
       "Customers had zero self-service capability. Every order meant a phone call, an email chain, and someone on the back end manually entering data. The team was buried in busywork instead of actually running operations."
@@ -113,8 +114,9 @@ export const caseStudies: CaseStudy[] = [
     ],
     outcomes: ["Audit-ready records", "Zero missed deadlines", "High data confidence", "Cross-site visibility"],
     capabilities: ["State-driven workflows", "Approval gates", "Role-based access", "Audit logging", "Immutable records", "Invalid-state prevention"],
-    thumbnailImage: { src: "/brand/images/case-studies/water-thumb.png", alt: "Water operations tracking system" },
-    heroImage: { src: "/brand/images/case-studies/water-hero.png", alt: "Compliance management architecture" },
+    iconImage: { src: "/brand/images/case-studies/water-icon.svg", alt: "Water operations icon" },
+    thumbnailImage: { src: "/brand/images/case-studies/water-thumb.svg", alt: "Water operations tracking system" },
+    heroImage: { src: "/brand/images/case-studies/water-hero.svg", alt: "Compliance management architecture" },
     problem: [
       "Everything was a mess. They couldn't put together reports, couldn't get a bird's eye view of what was missing, where violations were, or how to schedule anything. Teams spent hours and hours merging documents and going through everything manually across 64 locations.",
       "Operators in the field carried 40 sheets of paper to track their work. Chain of custody documents were scattered everywhere. When regulators asked for records, the team scrambled to reconstruct timelines from spreadsheets and filing cabinets."
@@ -144,8 +146,9 @@ export const caseStudies: CaseStudy[] = [
     duration: "10 weeks",
     outcomes: ["Accurate balances", "Reliable repayments", "Fewer manual reviews", "Clear loan status", "Audit-ready reporting"],
     capabilities: ["Loan state machine", "Contract enforcement", "Payment scheduling", "Exception handling", "Balance reconciliation", "Lifecycle reporting"],
-    thumbnailImage: { src: "/brand/images/case-studies/lending-thumb.png", alt: "Loan lifecycle management system" },
-    heroImage: { src: "/brand/images/case-studies/lending-hero.png", alt: "Lending platform architecture" },
+    iconImage: { src: "/brand/images/case-studies/lending-icon.svg", alt: "Lending system icon" },
+    thumbnailImage: { src: "/brand/images/case-studies/lending-thumb.svg", alt: "Loan lifecycle management system" },
+    heroImage: { src: "/brand/images/case-studies/lending-hero.svg", alt: "Lending platform architecture" },
     problem: [
       "The lending team tracked loans across multiple disconnected systems. Repayment schedules lived in one place, contract terms in another, and balance calculations in spreadsheets. When a loan moved from origination to repayment, someone had to manually update each system and hope nothing fell through.",
       "When borrowers missed a payment or needed a modification, the team handled it through email. No one could say with confidence what the current balance was on a given loan without manually reconciling across systems. Errors were discovered weeks later, usually by the borrower."
@@ -179,7 +182,8 @@ export const caseStudies: CaseStudy[] = [
     ],
     outcomes: ["Production-ready in hours", "Full observability", "Self-improving governance", "Zero manual scaffolding"],
     capabilities: ["Multi-agent orchestration", "Governance framework", "Automated verification", "MCP server integration", "Headless browser automation"],
-    thumbnailImage: { src: "/brand/images/case-studies/ai-agents-thumb.png", alt: "Multi-agent system architecture" },
+    iconImage: { src: "/brand/images/case-studies/ai-agents-icon.svg", alt: "AI agents icon" },
+    thumbnailImage: { src: "/brand/images/case-studies/ai-agents-thumb.svg", alt: "Multi-agent system architecture" },
     heroImage: { src: "/brand/images/case-studies/ai-agents-hero.png", alt: "BUBS framework architecture" },
     problem: [
       "AI tools can generate a working interface in minutes, but what you get is a facade. There are no backend workflows, no error handling, no way to know if something breaks. It looks great in a demo but falls apart the moment real users touch it.",
@@ -218,9 +222,9 @@ export const caseStudies: CaseStudy[] = [
     ],
     outcomes: ["Personalized plans", "Real-time tracking", "Automated alerts", "Score improvement"],
     capabilities: ["Credit data analysis", "Plan engine", "Progress tracking", "Bureau API integration", "Mobile-first UX", "Automated workflows"],
-    iconImage: { src: "/brand/images/case-studies/credit-platform-icon.svg", alt: "Credit platform icon" },
-    thumbnailImage: { src: "/brand/images/case-studies/credit-thumb.png", alt: "Credit building platform dashboard" },
-    heroImage: { src: "/brand/images/case-studies/credit-hero.png", alt: "Credit platform architecture" },
+    iconImage: { src: "/brand/images/case-studies/credit-icon.svg", alt: "Credit platform icon" },
+    thumbnailImage: { src: "/brand/images/case-studies/credit-thumb.svg", alt: "Credit building platform dashboard" },
+    heroImage: { src: "/brand/images/case-studies/credit-hero.svg", alt: "Credit platform architecture" },
     problem: [
       "People with damaged credit had nowhere to go. They could check their score, but then what? There was no roadmap. They bounced between credit monitoring apps, dispute services, and random advice online with no way to know what actually moves the needle.",
       "Credit improvement is not one thing, it is a sequence of coordinated actions. Without a structured plan, people wasted months paying for services that barely helped or made moves that actually hurt their score. They needed a guide, not just a dashboard."

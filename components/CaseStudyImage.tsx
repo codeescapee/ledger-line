@@ -4,6 +4,34 @@ interface CaseStudyImageProps {
   className?: string;
 }
 
+/* ── Real SVG image paths (when available) ── */
+const realImages: Record<string, Record<string, string>> = {
+  quoting: {
+    hero: "/brand/images/case-studies/quoting-hero.svg",
+    thumbnail: "/brand/images/case-studies/quoting-thumb.svg",
+  },
+  inventory: {
+    hero: "/brand/images/case-studies/inventory-hero.svg",
+    thumbnail: "/brand/images/case-studies/inventory-thumb.svg",
+  },
+  water: {
+    hero: "/brand/images/case-studies/water-hero.svg",
+    thumbnail: "/brand/images/case-studies/water-thumb.svg",
+  },
+  lending: {
+    hero: "/brand/images/case-studies/lending-hero.svg",
+    thumbnail: "/brand/images/case-studies/lending-thumb.svg",
+  },
+  "credit-platform": {
+    hero: "/brand/images/case-studies/credit-hero.svg",
+    thumbnail: "/brand/images/case-studies/credit-thumb.svg",
+  },
+  "ai-agents": {
+    hero: "/brand/images/case-studies/ai-agents-hero.png",
+    thumbnail: "/brand/images/case-studies/ai-agents-thumb.svg",
+  },
+};
+
 const themes: Record<
   string,
   { primary: string; secondary: string; accent: string; label: string }
@@ -447,6 +475,20 @@ export default function CaseStudyImage({
   variant,
   className = "",
 }: CaseStudyImageProps) {
+  const realSrc = realImages[slug]?.[variant];
+
+  if (realSrc) {
+    return (
+      // eslint-disable-next-line @next/next/no-img-element
+      <img
+        src={realSrc}
+        alt={`${themes[slug]?.label || slug} interface mockup`}
+        className={className}
+      />
+    );
+  }
+
+  // Fallback: inline SVG wireframe for case studies without custom images
   const theme = themes[slug] || themes.quoting;
   const width = 600;
   const height = variant === "hero" ? 450 : 400;

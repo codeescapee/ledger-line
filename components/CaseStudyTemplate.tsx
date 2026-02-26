@@ -1,9 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import type { CaseStudy } from "@/lib/caseStudies";
 import { caseStudies } from "@/lib/caseStudies";
-import CaseStudyImage from "./CaseStudyImage";
 import TagPills from "./TagPills";
 import CaseStudyNav from "./CaseStudyNav";
 import FadeIn from "./motion/FadeIn";
@@ -38,65 +38,71 @@ export default function CaseStudyTemplate({ caseStudy }: CaseStudyTemplateProps)
             )}
           </div>
 
-          <div className="grid lg:grid-cols-5 gap-12 items-start">
-            <div className="lg:col-span-3">
-              <FadeIn>
-                <div className="flex items-center gap-3 mb-6">
-                  <span className="inline-block text-accent-primary text-xs font-mono uppercase tracking-widest">
-                    {caseStudy.industry}
-                  </span>
-                  {caseStudy.duration && (
-                    <>
-                      <span className="text-text-on-dark-muted/40">·</span>
-                      <span className="text-text-on-dark-muted/60 text-xs font-mono uppercase tracking-wider">
-                        {caseStudy.duration}
-                      </span>
-                    </>
-                  )}
-                </div>
-              </FadeIn>
+          {/* Content — single column */}
+          <div className="max-w-3xl">
+            <FadeIn>
+              <div className="flex items-center gap-3 mb-6">
+                <span className="inline-block text-accent-primary text-xs font-mono uppercase tracking-widest">
+                  {caseStudy.industry}
+                </span>
+                {caseStudy.duration && (
+                  <>
+                    <span className="text-text-on-dark-muted/40">·</span>
+                    <span className="text-text-on-dark-muted/60 text-xs font-mono uppercase tracking-wider">
+                      {caseStudy.duration}
+                    </span>
+                  </>
+                )}
+              </div>
+            </FadeIn>
 
-              <FadeIn delay={0.1}>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.05] text-white mb-6">
-                  {caseStudy.title}
-                </h1>
-              </FadeIn>
+            <FadeIn delay={0.1}>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.05] text-white mb-6">
+                {caseStudy.title}
+              </h1>
+            </FadeIn>
 
-              <FadeIn delay={0.2}>
-                <p className="text-lg text-text-on-dark-muted leading-relaxed mb-8 max-w-prose">
-                  {caseStudy.summary}
-                </p>
-              </FadeIn>
+            <FadeIn delay={0.2}>
+              <p className="text-lg text-text-on-dark-muted leading-relaxed mb-8 max-w-prose">
+                {caseStudy.summary}
+              </p>
+            </FadeIn>
 
-              <FadeIn delay={0.3}>
-                <div className="mb-8">
-                  <TagPills
-                    outcomes={caseStudy.outcomes}
-                    capabilities={caseStudy.capabilities}
-                    dark
-                  />
-                </div>
-              </FadeIn>
+            <FadeIn delay={0.3}>
+              <div className="mb-8">
+                <TagPills
+                  outcomes={caseStudy.outcomes}
+                  capabilities={caseStudy.capabilities}
+                  dark
+                />
+              </div>
+            </FadeIn>
 
-              <FadeIn delay={0.35}>
-                <Button href="/contact" variant="primary" size="lg">
-                  Talk to us
-                </Button>
-              </FadeIn>
-            </div>
-
-            <div className="lg:col-span-2">
-              <FadeIn direction="right" delay={0.2}>
-                <div className="bg-dark-surface border border-border-dark rounded-xl p-3 shadow-glow overflow-hidden">
-                  <CaseStudyImage
-                    slug={caseStudy.slug}
-                    variant="hero"
-                    className="rounded-lg w-full h-auto"
-                  />
-                </div>
-              </FadeIn>
-            </div>
+            <FadeIn delay={0.35}>
+              <Button href="/contact" variant="primary" size="lg">
+                Talk to us
+              </Button>
+            </FadeIn>
           </div>
+        </div>
+      </section>
+
+      {/* Zone 3 — Hero Image (full-width) */}
+      <section className="px-6 py-12 bg-slate-50">
+        <div className="max-w-7xl mx-auto">
+          <FadeIn>
+            <div className="rounded-xl overflow-hidden" style={{ maxWidth: '1316px' }}>
+              <Image
+                src={caseStudy.heroImage.src}
+                alt={caseStudy.heroImage.alt}
+                width={1316}
+                height={620}
+                className="w-full h-auto"
+                priority
+                unoptimized={caseStudy.heroImage.src.endsWith('.svg')}
+              />
+            </div>
+          </FadeIn>
         </div>
       </section>
 

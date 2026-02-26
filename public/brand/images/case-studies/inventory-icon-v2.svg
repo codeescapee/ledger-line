@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80">
+  <rect width="80" height="80" rx="16" fill="#0a1628"/>
+
+  <!-- Balloon 1 -->
+  <ellipse cx="28" cy="26" rx="9" ry="11" fill="none" stroke="#2FB6D8" stroke-width="1.5"/>
+  <line x1="28" y1="37" x2="28" y2="44" stroke="#2FB6D8" stroke-width="1.2" opacity="0.6"/>
+
+  <!-- Balloon 2 -->
+  <ellipse cx="44" cy="22" rx="9" ry="11" fill="none" stroke="#2FB6D8" stroke-width="1.5" opacity="0.8"/>
+  <line x1="44" y1="33" x2="44" y2="44" stroke="#2FB6D8" stroke-width="1.2" opacity="0.5"/>
+
+  <!-- Balloon 3 smaller -->
+  <ellipse cx="59" cy="28" rx="7" ry="9" fill="none" stroke="#2FB6D8" stroke-width="1.5" opacity="0.5"/>
+  <line x1="59" y1="37" x2="59" y2="44" stroke="#2FB6D8" stroke-width="1.2" opacity="0.35"/>
+
+  <!-- Balloon string knot -->
+  <line x1="28" y1="44" x2="44" y2="44" stroke="#2FB6D8" stroke-width="1" opacity="0.4"/>
+  <line x1="44" y1="44" x2="59" y2="44" stroke="#2FB6D8" stroke-width="1" opacity="0.3"/>
+
+  <!-- Stacked tenant cards at bottom - representing multi-tenant -->
+  <rect x="10" y="52" width="60" height="10" rx="3" fill="none" stroke="#2FB6D8" stroke-width="1" opacity="0.25"/>
+  <rect x="13" y="56" width="60" height="10" rx="3" fill="none" stroke="#2FB6D8" stroke-width="1" opacity="0.4"/>
+  <rect x="16" y="60" width="60" height="12" rx="3" fill="#162035" stroke="#2FB6D8" stroke-width="1.2"/>
+
+  <!-- Dots inside bottom card representing inventory items -->
+  <circle cx="28" cy="66" r="2" fill="#2FB6D8" opacity="0.8"/>
+  <circle cx="38" cy="66" r="2" fill="#2FB6D8" opacity="0.5"/>
+  <circle cx="48" cy="66" r="2" fill="#2FB6D8" opacity="0.3"/>
+  <circle cx="58" cy="66" r="2" fill="#f59e0b" opacity="0.6"/>
+</svg>
