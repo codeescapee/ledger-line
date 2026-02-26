@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import TestimonialSlider from "@/components/TestimonialSlider";
 import SystemDiagram from "@/components/SystemDiagram";
 import HeroAnimation from "@/components/HeroAnimation";
@@ -235,12 +236,23 @@ export default function Home() {
             <StaggerItem key={study.slug} className="h-full">
               <Link href={`/work/${study.slug}`} className="group block h-full">
                 <Card className="h-full flex flex-col">
-                  <span className="inline-block text-xs font-mono uppercase tracking-wider text-accent-primary bg-accent-glow px-2 py-1 rounded mb-4">
+                  <span className="inline-block text-xs font-mono uppercase tracking-wider text-accent-primary bg-accent-glow px-2 py-1 rounded mb-4 self-start">
                     {study.industry}
                   </span>
-                  <h3 className="text-h3 text-foreground mb-3 group-hover:text-accent-primary transition-colors">
-                    {study.title}
-                  </h3>
+                  <div className={`flex items-start mb-3${study.iconImage ? " gap-4" : ""}`}>
+                    {study.iconImage && (
+                      <Image
+                        src={study.iconImage.src}
+                        alt={study.iconImage.alt}
+                        width={64}
+                        height={64}
+                        className="rounded-xl flex-shrink-0 shadow-md"
+                      />
+                    )}
+                    <h3 className="text-h3 text-foreground group-hover:text-accent-primary transition-colors">
+                      {study.title}
+                    </h3>
+                  </div>
                   <p className="text-text-secondary mb-6 leading-relaxed flex-1">
                     {study.featuredDescription || study.summary}
                   </p>

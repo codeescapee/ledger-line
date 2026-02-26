@@ -7,6 +7,7 @@ export interface CaseStudy {
   metrics?: { label: string; value: string }[];
   outcomes: string[];
   capabilities: string[];
+  iconImage?: { src: string; alt: string };
   thumbnailImage: { src: string; alt: string };
   heroImage: { src: string; alt: string };
   problem: string[];
@@ -72,6 +73,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     outcomes: ["Fewer errors", "Clear ownership", "Faster onboarding", "Reduced handoffs", "Inventory accuracy"],
     capabilities: ["Role-based workflows", "Permission enforcement", "Inventory states", "Order validation", "Admin overrides"],
+    iconImage: { src: "/brand/images/case-studies/inventory-icon.svg", alt: "Inventory system icon" },
     thumbnailImage: { src: "/brand/images/case-studies/inventory-thumb.png", alt: "Inventory operations workflow" },
     heroImage: { src: "/brand/images/case-studies/inventory-hero.png", alt: "Operations platform architecture" },
     problem: [
@@ -216,6 +218,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     outcomes: ["Personalized plans", "Real-time tracking", "Automated alerts", "Score improvement"],
     capabilities: ["Credit data analysis", "Plan engine", "Progress tracking", "Bureau API integration", "Mobile-first UX", "Automated workflows"],
+    iconImage: { src: "/brand/images/case-studies/credit-platform-icon.svg", alt: "Credit platform icon" },
     thumbnailImage: { src: "/brand/images/case-studies/credit-thumb.png", alt: "Credit building platform dashboard" },
     heroImage: { src: "/brand/images/case-studies/credit-hero.png", alt: "Credit platform architecture" },
     problem: [
