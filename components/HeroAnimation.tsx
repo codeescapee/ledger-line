@@ -133,32 +133,63 @@ function NodeLabel({ x, y, text }: { x: number; y: number; text: string }) {
   );
 }
 
-// ── Data pulse traveling upward ──
-function DataPulse({
-  startX,
-  startY,
-  endX,
-  endY,
+// ── Sample points along a cubic bezier curve ──
+type Pt = [number, number];
+
+function sampleBezier(p0: Pt, p1: Pt, p2: Pt, p3: Pt, steps = 10) {
+  const xs: number[] = [];
+  const ys: number[] = [];
+  for (let i = 0; i <= steps; i++) {
+    const t = i / steps;
+    const u = 1 - t;
+    const u2 = u * u;
+    const u3 = u2 * u;
+    const t2 = t * t;
+    const t3 = t2 * t;
+    xs.push(u3 * p0[0] + 3 * u2 * t * p1[0] + 3 * u * t2 * p2[0] + t3 * p3[0]);
+    ys.push(u3 * p0[1] + 3 * u2 * t * p1[1] + 3 * u * t2 * p2[1] + t3 * p3[1]);
+  }
+  return { xs, ys };
+}
+
+// ── Pre-computed bezier paths for pulse animations ──
+const PULSE_PATHS = {
+  // DATA → LOGIC
+  schemaToValidate: sampleBezier([125, 304], [125, 280], [105, 262], [105, 259]),
+  recordsToEnforce: sampleBezier([225, 304], [225, 280], [205, 262], [205, 259]),
+  stateToCompute: sampleBezier([310, 304], [310, 280], [305, 262], [305, 259]),
+  // LOGIC → WORKFLOW
+  validateToDraft: sampleBezier([105, 211], [105, 190], [100, 173], [100, 163]),
+  enforceToReview: sampleBezier([205, 211], [205, 190], [200, 173], [200, 163]),
+  computeToApproved: sampleBezier([305, 211], [305, 190], [305, 173], [305, 163]),
+  // WORKFLOW → INTERFACE
+  draftToDashboard: sampleBezier([100, 137], [100, 110], [130, 85], [130, 74]),
+  reviewToApi: sampleBezier([200, 137], [200, 110], [280, 85], [280, 74]),
+};
+
+// ── Data pulse that follows actual bezier curve ──
+function BezierPulse({
+  path,
   delay,
-  repeatDelay = 3,
+  repeatDelay = 4,
 }: {
-  startX: number;
-  startY: number;
-  endX: number;
-  endY: number;
+  path: { xs: number[]; ys: number[] };
   delay: number;
   repeatDelay?: number;
 }) {
-  const midX = (startX + endX) / 2 + (endX - startX) * 0.3;
+  const n = path.xs.length;
+  const opacities = path.xs.map((_, i) =>
+    i === 0 || i === n - 1 ? 0 : 0.8
+  );
   return (
     <motion.circle
       r={2.5}
       fill={TEAL}
-      initial={{ cx: startX, cy: startY, opacity: 0 }}
+      initial={{ cx: path.xs[0], cy: path.ys[0], opacity: 0 }}
       animate={{
-        cx: [startX, midX, endX],
-        cy: [startY, (startY + endY) / 2, endY],
-        opacity: [0, 0.8, 0.8, 0],
+        cx: path.xs,
+        cy: path.ys,
+        opacity: opacities,
       }}
       transition={{
         duration: 1.5,
@@ -532,8 +563,8 @@ export default function HeroAnimation({ className }: { className?: string }) {
         </NodeGroup>
 
         {/* Vertical paths: WORKFLOW → INTERFACE */}
-        <DrawPath d="M100 137 C100 110, 120 85, 125 74" delay={2.7} duration={0.5} />
-        <DrawPath d="M200 137 C200 110, 270 85, 275 74" delay={2.8} duration={0.5} />
+        <DrawPath d="M100 137 C100 110, 130 85, 130 74" delay={2.7} duration={0.5} />
+        <DrawPath d="M200 137 C200 110, 280 85, 280 74" delay={2.8} duration={0.5} />
 
         {/* ── Brand mark ── */}
         <motion.g
@@ -570,18 +601,18 @@ export default function HeroAnimation({ className }: { className?: string }) {
         ════════════════════════════════════════ */}
 
         {/* DATA → LOGIC pulses */}
-        <DataPulse startX={125} startY={304} endX={105} endY={259} delay={0} repeatDelay={4} />
-        <DataPulse startX={225} startY={304} endX={205} endY={259} delay={1.3} repeatDelay={4} />
-        <DataPulse startX={310} startY={304} endX={305} endY={259} delay={2.6} repeatDelay={4} />
+        <BezierPulse path={PULSE_PATHS.schemaToValidate} delay={0} repeatDelay={4} />
+        <BezierPulse path={PULSE_PATHS.recordsToEnforce} delay={1.3} repeatDelay={4} />
+        <BezierPulse path={PULSE_PATHS.stateToCompute} delay={2.6} repeatDelay={4} />
 
         {/* LOGIC → WORKFLOW pulses */}
-        <DataPulse startX={105} startY={211} endX={100} endY={163} delay={1.5} repeatDelay={4} />
-        <DataPulse startX={205} startY={211} endX={200} endY={163} delay={2.8} repeatDelay={4} />
-        <DataPulse startX={305} startY={211} endX={305} endY={163} delay={0.8} repeatDelay={4} />
+        <BezierPulse path={PULSE_PATHS.validateToDraft} delay={1.5} repeatDelay={4} />
+        <BezierPulse path={PULSE_PATHS.enforceToReview} delay={2.8} repeatDelay={4} />
+        <BezierPulse path={PULSE_PATHS.computeToApproved} delay={0.8} repeatDelay={4} />
 
         {/* WORKFLOW → INTERFACE pulses */}
-        <DataPulse startX={100} startY={137} endX={125} endY={74} delay={2.0} repeatDelay={5} />
-        <DataPulse startX={200} startY={137} endX={275} endY={74} delay={3.5} repeatDelay={5} />
+        <BezierPulse path={PULSE_PATHS.draftToDashboard} delay={2.0} repeatDelay={5} />
+        <BezierPulse path={PULSE_PATHS.reviewToApi} delay={3.5} repeatDelay={5} />
       </svg>
     </div>
   );
