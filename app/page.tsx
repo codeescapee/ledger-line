@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import TestimonialSlider from "@/components/TestimonialSlider";
-import SystemDiagram from "@/components/SystemDiagram";
+import ProcessDiagram from "@/components/ProcessDiagram";
 import HeroAnimation from "@/components/HeroAnimation";
 import SocialProofBar from "@/components/SocialProofBar";
 import FadeIn from "@/components/motion/FadeIn";
@@ -298,11 +298,9 @@ export default function Home() {
               See our full process
             </Button>
           </FadeIn>
-          <div className="hidden md:block">
-            <FadeIn direction="right">
-              <SystemDiagram />
-            </FadeIn>
-          </div>
+          <FadeIn direction="right" className="mt-8 md:mt-0">
+            <ProcessDiagram />
+          </FadeIn>
         </div>
       </Section>
 
